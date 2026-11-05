@@ -1,0 +1,82 @@
+[
+  {
+    "id": "b-tech-computer-science-and-engineering",
+    "name": "B.Tech Computer Science and Engineering",
+    "discipline": "Engineering & Technology",
+    "level": "UG",
+    "duration": "4 years",
+    "eligibility": "10+2 with Physics, Chemistry, Mathematics and a qualifying entrance score."
+  },
+  {
+    "id": "mbbs",
+    "name": "MBBS",
+    "discipline": "Medicine & Health Sciences",
+    "level": "UG",
+    "duration": "5.5 years",
+    "eligibility": "10+2 with Physics, Chemistry, Biology and NEET-UG qualification."
+  },
+  {
+    "id": "b-arch",
+    "name": "B.Arch",
+    "discipline": "Architecture & Design",
+    "level": "UG",
+    "duration": "5 years",
+    "eligibility": "10+2 with Mathematics and a qualifying architecture aptitude score."
+  },
+  {
+    "id": "bba",
+    "name": "BBA",
+    "discipline": "Management",
+    "level": "UG",
+    "duration": "3 years",
+    "eligibility": "10+2 in any stream."
+  },
+  {
+    "id": "b-sc-physics",
+    "name": "B.Sc Physics",
+    "discipline": "Science & Humanities",
+    "level": "UG",
+    "duration": "3 years",
+    "eligibility": "10+2 with Physics, Chemistry, Mathematics."
+  },
+  {
+    "id": "m-tech-data-science",
+    "name": "M.Tech Data Science",
+    "discipline": "Engineering & Technology",
+    "level": "PG",
+    "duration": "2 years",
+    "eligibility": "B.E. / B.Tech in a relevant branch."
+  },
+  {
+    "id": "mba",
+    "name": "MBA",
+    "discipline": "Management",
+    "level": "PG",
+    "duration": "2 years",
+    "eligibility": "Bachelor's degree and a qualifying management test score."
+  },
+  {
+    "id": "m-sc-biotechnology",
+    "name": "M.Sc Biotechnology",
+    "discipline": "Science & Humanities",
+    "level": "PG",
+    "duration": "2 years",
+    "eligibility": "B.Sc in a life-science subject."
+  },
+  {
+    "id": "m-arch",
+    "name": "M.Arch",
+    "discipline": "Architecture & Design",
+    "level": "PG",
+    "duration": "2 years",
+    "eligibility": "B.Arch degree."
+  },
+  {
+    "id": "ph-d",
+    "name": "Ph.D.",
+    "discipline": "Research & Innovation",
+    "level": "PG",
+    "duration": "3-5 years",
+    "eligibility": "Master's degree and a research proposal."
+  }
+]

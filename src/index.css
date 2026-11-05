@@ -1,0 +1,284 @@
+@import '@fontsource/dm-sans/400.css';
+@import '@fontsource/dm-sans/500.css';
+@import '@fontsource/dm-sans/600.css';
+@import '@fontsource/dm-sans/700.css';
+@import '@fontsource/cormorant-garamond/500.css';
+@import '@fontsource/cormorant-garamond/600.css';
+@import '@fontsource/cormorant-garamond/700.css';
+@import '@fontsource/cormorant-garamond/500-italic.css';
+@import 'tailwindcss';
+@config '../tailwind.config.ts';
+
+@layer base {
+  /* Tokens live in tailwind.config.ts; expose them to SVG and plain CSS. */
+  :root {
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --color-ink: theme(colors.ink);
+    --color-off-white: theme(colors.off-white);
+    --color-srm-blue: theme(colors.srm-blue);
+    --color-amber: theme(colors.amber);
+    --color-teal: theme(colors.teal);
+    --color-royal: theme(colors.royal);
+  }
+  html {
+    scroll-padding-top: 6rem;
+  }
+  body {
+    @apply bg-white font-sans text-17 text-ink antialiased;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-amber);
+    outline-offset: 2px;
+  }
+  .on-light :focus-visible {
+    outline-color: var(--color-srm-blue);
+  }
+  select {
+    @apply bg-transparent;
+  }
+  option {
+    @apply text-ink;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+@layer components {
+  /* Blueprint grid behind dark panels, as in the design. */
+  .grid-lines {
+    background-image:
+      linear-gradient(rgb(244 241 234 / 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(244 241 234 / 0.07) 1px, transparent 1px);
+    background-size: 96px 96px;
+  }
+  /* Sentence-case Sora by default; individual sections set their own voice. */
+  .home h2 {
+    @apply font-display font-extrabold;
+    font-size: clamp(2.25rem, 5.4vw, 4.75rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .home h3 {
+    @apply font-display;
+  }
+  .home em {
+    @apply font-serif font-normal text-amber normal-case;
+    letter-spacing: -0.01em;
+  }
+  .home .on-light em {
+    color: inherit;
+  }
+  .eyebrow {
+    @apply text-14 font-semibold tracking-[0.12em] uppercase;
+  }
+  /* Keeps the see-through nav readable over photos on every page. */
+  .nav-scrim {
+    background: linear-gradient(to bottom, rgb(244 241 234 / 0.94), rgb(244 241 234 / 0.86) 50%, rgb(244 241 234 / 0));
+  }
+  .ken-burns {
+    transform-origin: 62% 55%;
+    animation: ken-burns 28s ease-in-out infinite alternate;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
+
+html:has(.ask-drawer[open]) {
+  overflow: hidden;
+}
+.ask-drawer[open] {
+  animation: ask-in 0.24s ease-out;
+}
+@keyframes ask-in {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+}
+@keyframes ken-burns {
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes scroll-cue {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes spin-gear {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ecg-draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.nav-link {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px no-repeat;
+  padding-bottom: 2px;
+  transition: background-size 200ms ease;
+}
+.nav-link:hover {
+  background-size: 100% 2px;
+}
+
+/* Campus map. */
+.campus-scene {
+  background: #efe7d6;
+  transition: background-color 600ms ease;
+}
+.campus-scene[data-night] {
+  background: #0b1634;
+}
+.campus-scene path {
+  transition: fill 600ms ease;
+}
+.campus-scene .lamp-pool,
+.campus-scene .beam {
+  opacity: 0;
+  transition: opacity 600ms ease;
+}
+.campus-scene[data-night] .lamp-pool {
+  opacity: 0.2;
+}
+.campus-scene[data-night] .beam {
+  opacity: 0.45;
+}
+.campus-scene .bld {
+  transition: filter 300ms ease;
+}
+/* Not opacity: buildings behind would show through. */
+.campus-scene .bld[data-dim] {
+  filter: grayscale(0.85) contrast(0.6) brightness(1.2);
+}
+.campus-scene[data-night] .bld[data-dim] {
+  filter: grayscale(0.7) brightness(0.8);
+}
+.campus-scene .lift {
+  transition: transform 200ms ease;
+}
+.campus-scene .edge {
+  fill: none;
+  stroke: var(--color-amber);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+@media (hover: hover) {
+  .campus-scene .bld:hover .lift {
+    transform: translateY(-6px);
+  }
+  .campus-scene .bld:hover .edge {
+    opacity: 1;
+  }
+}
+.campus-scene .sway {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: sway 5s ease-in-out infinite alternate;
+}
+.campus-scene .flag {
+  transform-box: fill-box;
+  transform-origin: 0 50%;
+  animation: flutter 1.1s ease-in-out infinite alternate;
+}
+.campus-scene .ripple {
+  stroke-dasharray: 14 18;
+  animation: ripple 6s linear infinite;
+}
+.campus-scene.paused * {
+  animation-play-state: paused;
+}
+@keyframes sway {
+  from {
+    transform: rotate(-1.4deg);
+  }
+  to {
+    transform: rotate(1.4deg);
+  }
+}
+@keyframes flutter {
+  from {
+    transform: skewY(-5deg) scaleX(1);
+  }
+  to {
+    transform: skewY(6deg) scaleX(0.92);
+  }
+}
+@keyframes ripple {
+  to {
+    stroke-dashoffset: -64;
+  }
+}
+
+/* Motion layer. */
+.photo-reveal {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.photo-reveal[data-shown='true'] {
+  clip-path: inset(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .photo-reveal {
+    clip-path: none;
+  }
+}
+.skeleton {
+  background: linear-gradient(100deg, rgb(5 14 43 / 0.05) 40%, rgb(5 14 43 / 0.1) 50%, rgb(5 14 43 / 0.05) 60%) 0 0 / 200% 100%;
+  animation: skeleton 1.4s linear infinite;
+}
+@keyframes skeleton {
+  to {
+    background-position: -200% 0;
+  }
+}
+.marquee {
+  animation: marquee 48s linear infinite;
+}
+.marquee-box:hover .marquee,
+.marquee-box:focus-within .marquee {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+input:focus-visible,
+select:focus-visible {
+  outline-offset: 0;
+}
+button:active {
+  scale: 0.98;
+}
+
+/* Cormorant is a display face: it has no 800, and it reads best at 600 with open spacing. */
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-heading);
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+}
+.font-serif {
+  font-weight: 500 !important;
+}

@@ -1,0 +1,17 @@
+{
+  "home": [
+    "Which hostels are available?",
+    "How do I apply for 2026-27?",
+    "What are the placement figures?"
+  ],
+  "engineering": [
+    "Which B.Tech programmes are offered?",
+    "What is the SRMJEEE exam?",
+    "What are the B.Tech eligibility criteria?"
+  ],
+  "medicine": [
+    "Which medical and health sciences programmes are offered?",
+    "What does the medical college hospital offer?",
+    "Are scholarships available for medical students?"
+  ]
+}

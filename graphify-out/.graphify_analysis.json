@@ -1,0 +1,356 @@
+{
+  "communities": {
+    "0": [
+      "src_components_button_button",
+      "src_components_horizontalscroll",
+      "src_components_horizontalscroll_horizontalscroll",
+      "src_components_section_reveal",
+      "src_components_section_section",
+      "src_components_stat",
+      "src_components_stat_props",
+      "src_components_stat_stat",
+      "src_data_engineering",
+      "src_data_medicine",
+      "src_pages_engineering",
+      "src_pages_engineering_careers",
+      "src_pages_engineering_cta",
+      "src_pages_engineering_dean",
+      "src_pages_engineering_departments",
+      "src_pages_engineering_disciplines",
+      "src_pages_engineering_engineering",
+      "src_pages_engineering_glance",
+      "src_pages_engineering_research",
+      "src_pages_learnleaplead_learnleaplead",
+      "src_pages_medicine",
+      "src_pages_medicine_about",
+      "src_pages_medicine_anatomy",
+      "src_pages_medicine_clinical",
+      "src_pages_medicine_cta",
+      "src_pages_medicine_ecg",
+      "src_pages_medicine_finder",
+      "src_pages_medicine_medicine",
+      "src_pages_medicine_research",
+      "src_pages_medicine_schools",
+      "src_sections_engineering_diagrams",
+      "src_sections_engineering_diagrams_centrediagram",
+      "src_sections_engineering_diagrams_figures",
+      "src_sections_engineering_diagrams_gears",
+      "src_sections_engineering_diagrams_label",
+      "src_sections_medicine_bodydiagram",
+      "src_sections_medicine_bodydiagram_bodydiagram",
+      "src_sections_medicine_bodydiagram_layers",
+      "src_sections_medicine_bodydiagram_props"
+    ],
+    "1": [
+      "src_components_pagehero",
+      "src_components_pagehero_pagehero",
+      "src_components_pagehero_props",
+      "src_components_photo",
+      "src_components_photo_photo",
+      "src_components_photo_props",
+      "src_data_home",
+      "src_data_learn",
+      "src_data_locations",
+      "src_data_news",
+      "src_data_photos",
+      "src_data_programmes",
+      "src_data_testimonials",
+      "src_lib_photos",
+      "src_lib_photos_manifest",
+      "src_lib_photos_photoentry",
+      "src_lib_photos_photofor",
+      "src_lib_photos_resolvedphoto",
+      "src_lib_photos_urls",
+      "src_pages_home",
+      "src_pages_home_cta",
+      "src_pages_home_home",
+      "src_pages_home_research",
+      "src_pages_home_trust",
+      "src_pages_learnleaplead",
+      "src_sections_home_optional",
+      "src_sections_home_optional_land",
+      "src_sections_home_optional_livelearnplay",
+      "src_sections_home_optional_location",
+      "src_sections_home_optional_newsevents",
+      "src_sections_home_optional_newsitem",
+      "src_sections_home_optional_testimonial",
+      "src_sections_home_optional_testimonials",
+      "src_sections_home_optional_worldmap"
+    ],
+    "2": [
+      "package",
+      "package_dependencies",
+      "package_dependencies_fontsource_instrument_serif",
+      "package_dependencies_fontsource_inter_tight",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_react_router_dom",
+      "package_devdependencies",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_vite",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "package_devdependencies_vite",
+      "package_devdependencies_vitejs_plugin_react",
+      "package_name",
+      "package_private",
+      "package_type",
+      "package_version",
+      "ref_fontsource_instrument_serif",
+      "ref_fontsource_inter_tight",
+      "ref_react_dom",
+      "ref_tailwindcss",
+      "ref_tailwindcss_vite",
+      "ref_types_react",
+      "ref_types_react_dom",
+      "ref_typescript",
+      "ref_vite",
+      "ref_vitejs_plugin_react",
+      "tailwind_config",
+      "tailwind_config_rem",
+      "vite_config"
+    ],
+    "3": [
+      "package_devdependencies_playwright",
+      "ref_node_child_process",
+      "ref_node_fs",
+      "ref_playwright",
+      "scripts_check_photos",
+      "scripts_check_photos_errors",
+      "scripts_check_photos_photos_slots",
+      "scripts_check_photos_seen",
+      "scripts_screenshot",
+      "scripts_screenshot_routes",
+      "scripts_screenshot_server",
+      "scripts_screenshot_stop",
+      "scripts_screenshot_waitforserver",
+      "scripts_screenshot_width",
+      "scripts_verify",
+      "scripts_verify_audit",
+      "scripts_verify_banned",
+      "scripts_verify_check",
+      "scripts_verify_failures",
+      "scripts_verify_pass",
+      "scripts_verify_routes",
+      "scripts_verify_scale",
+      "scripts_verify_server",
+      "scripts_verify_settle",
+      "scripts_verify_stop"
+    ],
+    "4": [
+      "ref_react",
+      "ref_react_router_dom",
+      "src_app",
+      "src_app_app",
+      "src_app_engineering",
+      "src_app_home",
+      "src_app_learnleaplead",
+      "src_app_medicine",
+      "src_app_scrollmanager",
+      "src_assets_srm_seal",
+      "src_components_button",
+      "src_components_button_props",
+      "src_components_button_styles",
+      "src_components_footer",
+      "src_components_footer_footer",
+      "src_components_header",
+      "src_components_header_header",
+      "src_components_header_headerdata",
+      "src_components_header_sizes",
+      "src_data_site",
+      "src_index",
+      "src_main"
+    ],
+    "5": [
+      "tsconfig",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_lib",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_nounusedlocals",
+      "tsconfig_compileroptions_nounusedparameters",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target",
+      "tsconfig_compileroptions_types",
+      "tsconfig_include"
+    ],
+    "6": [
+      "src_components_tag",
+      "src_components_tag_tag",
+      "src_data_fees",
+      "src_sections_home_programmes",
+      "src_sections_home_programmes_compare",
+      "src_sections_home_programmes_estimator",
+      "src_sections_home_programmes_finder",
+      "src_sections_home_programmes_inr",
+      "src_sections_home_programmes_levelname",
+      "src_sections_home_programmes_programmes",
+      "src_sections_home_programmes_tuition"
+    ],
+    "7": [
+      "src_data_campus",
+      "src_lib_isomap",
+      "src_lib_isomap_buildisomap",
+      "src_lib_isomap_project",
+      "src_sections_home_campusmap",
+      "src_sections_home_campusmap_campusmap",
+      "src_sections_home_campusmap_drawing",
+      "src_sections_home_campusmap_legend",
+      "src_sections_home_campusmap_loadexplored",
+      "src_sections_home_campusmap_markerstyle"
+    ],
+    "8": [
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_check_photos",
+      "package_scripts_dev",
+      "package_scripts_preview",
+      "package_scripts_shot",
+      "package_scripts_verify"
+    ],
+    "9": [
+      "package_dependencies_framer_motion",
+      "ref_framer_motion",
+      "src_components_section",
+      "src_components_section_props",
+      "src_components_section_tones"
+    ],
+    "10": [
+      "src_lib_isomap_d",
+      "src_lib_isomap_d_isoitem"
+    ]
+  },
+  "cohesion": {
+    "0": 0.12955465587044535,
+    "1": 0.11586452762923351,
+    "2": 0.08669354838709678,
+    "3": 0.08666666666666667,
+    "4": 0.16017316017316016,
+    "5": 0.11764705882352941,
+    "6": 0.36363636363636365,
+    "7": 0.35555555555555557,
+    "8": 0.2857142857142857,
+    "9": 0.4,
+    "10": 1.0
+  },
+  "gods": [
+    {
+      "id": "src_components_section_section",
+      "label": "Section()",
+      "degree": 30
+    },
+    {
+      "id": "ref_react",
+      "label": "react",
+      "degree": 16
+    },
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 15
+    },
+    {
+      "id": "src_components_button_button",
+      "label": "Button()",
+      "degree": 14
+    },
+    {
+      "id": "src_components_stat_stat",
+      "label": "Stat()",
+      "degree": 12
+    },
+    {
+      "id": "src_pages_home_home",
+      "label": "Home()",
+      "degree": 12
+    },
+    {
+      "id": "src_components_photo_photo",
+      "label": "Photo()",
+      "degree": 11
+    },
+    {
+      "id": "src_pages_engineering_engineering",
+      "label": "Engineering()",
+      "degree": 11
+    },
+    {
+      "id": "src_pages_medicine_medicine",
+      "label": "Medicine()",
+      "degree": 11
+    },
+    {
+      "id": "src_sections_home_campusmap_campusmap",
+      "label": "CampusMap()",
+      "degree": 10
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Cta()",
+      "target": "Button()",
+      "source_files": [
+        "src/pages/Home.tsx",
+        "src/components/Button.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "Home()",
+      "target": "Button()",
+      "source_files": [
+        "src/pages/Home.tsx",
+        "src/components/Button.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "Finder()",
+      "target": "Button()",
+      "source_files": [
+        "src/sections/home/Programmes.tsx",
+        "src/components/Button.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "Engineering()",
+      "target": "PageHero()",
+      "source_files": [
+        "src/pages/Engineering.tsx",
+        "src/components/PageHero.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "Medicine()",
+      "target": "PageHero()",
+      "source_files": [
+        "src/pages/Medicine.tsx",
+        "src/components/PageHero.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

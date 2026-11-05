@@ -1,0 +1,15 @@
+{
+  "eyebrow": "About · Kattankulathur, Chennai · est. 1985",
+  "panels": [
+    { "n": "01", "t": "Learn.", "d": "Programmes across disciplines, taught by faculty in working labs.", "slot": "learn.learn" },
+    { "n": "02", "t": "Leap.", "d": "Research, innovation, internships and global exposure, from Chennai outward.", "slot": "learn.leap" },
+    { "n": "03", "t": "Lead.", "d": "Placements, alumni and entrepreneurship: 5,546+ job offers in 2023-24.", "slot": "learn.lead" }
+  ],
+  "stats": [
+    { "value": "5,546+", "label": "Job offers", "note": "2023-24" },
+    { "value": "52 LPA", "label": "Highest package", "note": "2023-24" },
+    { "value": "980+", "label": "Companies visited", "note": "2023-24" },
+    { "value": "#12", "label": "NIRF rank", "note": "2024, among 100 ranked institutions" }
+  ],
+  "method": "Counts are job offers reported by SRM for the 2023-24 placement season, not unique students."
+}

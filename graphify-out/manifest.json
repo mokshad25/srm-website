@@ -1,0 +1,586 @@
+{
+  "package.json": {
+    "mtime": 1793876849.3043187,
+    "seen": 1793877297.591818,
+    "ast_hash": "63aba6d44c4fed42a93f6bebe9d60096",
+    "semantic_hash": ""
+  },
+  "scripts/check-photos.mjs": {
+    "mtime": 1793867165.4499624,
+    "seen": 1793868383.3948648,
+    "ast_hash": "e1c10b03a30c88352f6cbb0bf385f001",
+    "semantic_hash": "e1c10b03a30c88352f6cbb0bf385f001"
+  },
+  "scripts/screenshot.mjs": {
+    "mtime": 1793869759.202667,
+    "seen": 1793870096.5782871,
+    "ast_hash": "5b2ce88919f7ba67079e5ca3a9cc76a2",
+    "semantic_hash": ""
+  },
+  "scripts/verify.mjs": {
+    "mtime": 1793877209.2767365,
+    "seen": 1793877297.591827,
+    "ast_hash": "714e80d1e56fe494083158b75a17e6ad",
+    "semantic_hash": ""
+  },
+  "src/App.tsx": {
+    "mtime": 1793876848.4459815,
+    "seen": 1793877297.5918279,
+    "ast_hash": "ed4e82fc1ea83be2c904e02ffddc9b9c",
+    "semantic_hash": ""
+  },
+  "src/components/Button.tsx": {
+    "mtime": 1793876015.362131,
+    "seen": 1793876251.604238,
+    "ast_hash": "4e0999cded946ec6150af59741a827b2",
+    "semantic_hash": ""
+  },
+  "src/components/Footer.tsx": {
+    "mtime": 1793876034.2379553,
+    "seen": 1793876251.604239,
+    "ast_hash": "ef577289a3b8f780935c7bdd0516f153",
+    "semantic_hash": ""
+  },
+  "src/components/Header.tsx": {
+    "mtime": 1793876015.3882213,
+    "seen": 1793876251.60424,
+    "ast_hash": "6602ccadc26edb9fe4d756473523e16b",
+    "semantic_hash": ""
+  },
+  "src/components/HorizontalScroll.tsx": {
+    "mtime": 1793869843.5124354,
+    "seen": 1793870096.578292,
+    "ast_hash": "83068ad88167b07c47bf91380df3c26e",
+    "semantic_hash": ""
+  },
+  "src/components/PageHero.tsx": {
+    "mtime": 1793876015.3622131,
+    "seen": 1793876251.604241,
+    "ast_hash": "3d4e410c150a568b9f560ccd323d79b0",
+    "semantic_hash": ""
+  },
+  "src/components/Photo.tsx": {
+    "mtime": 1793867165.4515252,
+    "seen": 1793868383.395054,
+    "ast_hash": "dddad05c3cde2cb996739eb948e00f1f",
+    "semantic_hash": "dddad05c3cde2cb996739eb948e00f1f"
+  },
+  "src/components/Section.tsx": {
+    "mtime": 1793869323.4271343,
+    "seen": 1793869323.670828,
+    "ast_hash": "8279cb4c7cf55b420941df30219ae139",
+    "semantic_hash": ""
+  },
+  "src/components/Stat.tsx": {
+    "mtime": 1793867165.4562573,
+    "seen": 1793868383.395093,
+    "ast_hash": "8be2422cb36d588e5613a289b38787dd",
+    "semantic_hash": "8be2422cb36d588e5613a289b38787dd"
+  },
+  "src/components/Tag.tsx": {
+    "mtime": 1793867165.4546416,
+    "seen": 1793868383.395113,
+    "ast_hash": "c08c88005122f906ad0a1c07a276fae2",
+    "semantic_hash": "c08c88005122f906ad0a1c07a276fae2"
+  },
+  "src/data/campus.json": {
+    "mtime": 1793876941.711744,
+    "seen": 1793877297.591846,
+    "ast_hash": "73b8772435962df812e14777575adb8b",
+    "semantic_hash": ""
+  },
+  "src/data/engineering.json": {
+    "mtime": 1793867264.2382007,
+    "seen": 1793868383.395136,
+    "ast_hash": "2e32c18d497e2572e687c6416ab6ba8c",
+    "semantic_hash": "2e32c18d497e2572e687c6416ab6ba8c",
+    "ast_empty": true
+  },
+  "src/data/fees.json": {
+    "mtime": 1793867264.2422006,
+    "seen": 1793868383.395137,
+    "ast_hash": "c5d3fc83ba56d83e79639246a007272a",
+    "semantic_hash": "c5d3fc83ba56d83e79639246a007272a",
+    "ast_empty": true
+  },
+  "src/data/home.json": {
+    "mtime": 1793876015.3637486,
+    "seen": 1793876251.604255,
+    "ast_hash": "fddb40f14b6cbefe770ff98c31c1926c",
+    "semantic_hash": ""
+  },
+  "src/data/learn.json": {
+    "mtime": 1793867664.6649194,
+    "seen": 1793868383.395138,
+    "ast_hash": "4cce51677b0107b7c8a98f19860b7b13",
+    "semantic_hash": "4cce51677b0107b7c8a98f19860b7b13",
+    "ast_empty": true
+  },
+  "src/data/locations.json": {
+    "mtime": 1793867901.8119621,
+    "seen": 1793868383.395138,
+    "ast_hash": "58e0494c51d30eb3494f7c9198986bb9",
+    "semantic_hash": "58e0494c51d30eb3494f7c9198986bb9",
+    "ast_empty": true
+  },
+  "src/data/medicine.json": {
+    "mtime": 1793867264.241646,
+    "seen": 1793868383.395139,
+    "ast_hash": "3183bb7b91c1d9e2597a7e577b5ce814",
+    "semantic_hash": "3183bb7b91c1d9e2597a7e577b5ce814",
+    "ast_empty": true
+  },
+  "src/data/news.json": {
+    "mtime": 1793867901.8121727,
+    "seen": 1793868383.3951402,
+    "ast_hash": "58e0494c51d30eb3494f7c9198986bb9",
+    "semantic_hash": "58e0494c51d30eb3494f7c9198986bb9",
+    "ast_empty": true
+  },
+  "src/data/photos.json": {
+    "mtime": 1793876849.6237538,
+    "seen": 1793877297.591854,
+    "ast_hash": "49833131c5b89d9ecb334aeed812662b",
+    "semantic_hash": ""
+  },
+  "src/data/programmes.json": {
+    "mtime": 1793867264.2419386,
+    "seen": 1793868383.3951411,
+    "ast_hash": "45933daf1d73addbb5776cc9ca23f4b9",
+    "semantic_hash": "45933daf1d73addbb5776cc9ca23f4b9",
+    "ast_empty": true
+  },
+  "src/data/site.json": {
+    "mtime": 1793871548.9455192,
+    "seen": 1793872163.258396,
+    "ast_hash": "4a45ec1e46f29e06298b79175957405f",
+    "semantic_hash": ""
+  },
+  "src/data/testimonials.json": {
+    "mtime": 1793867901.81253,
+    "seen": 1793868383.3951418,
+    "ast_hash": "58e0494c51d30eb3494f7c9198986bb9",
+    "semantic_hash": "58e0494c51d30eb3494f7c9198986bb9",
+    "ast_empty": true
+  },
+  "src/lib/photos.ts": {
+    "mtime": 1793869194.3680403,
+    "seen": 1793869323.670843,
+    "ast_hash": "a6e0cb08720342b9e8e3e8c1b99f6334",
+    "semantic_hash": ""
+  },
+  "src/main.tsx": {
+    "mtime": 1793867165.4416327,
+    "seen": 1793868383.395201,
+    "ast_hash": "f6904e0d3487abe55ea51a8f3c4b2ac5",
+    "semantic_hash": "f6904e0d3487abe55ea51a8f3c4b2ac5"
+  },
+  "src/pages/Engineering.tsx": {
+    "mtime": 1793876015.3623133,
+    "seen": 1793876251.604268,
+    "ast_hash": "bd128905b59b81c5ba1e2af5489c702a",
+    "semantic_hash": ""
+  },
+  "src/pages/Home.tsx": {
+    "mtime": 1793876015.361493,
+    "seen": 1793876251.604269,
+    "ast_hash": "9b86b074de77afbd0e51e041fd750799",
+    "semantic_hash": ""
+  },
+  "src/pages/LearnLeapLead.tsx": {
+    "mtime": 1793876015.3630168,
+    "seen": 1793876251.60427,
+    "ast_hash": "d901a9a46c527217e18fb304bec5ad01",
+    "semantic_hash": ""
+  },
+  "src/pages/Medicine.tsx": {
+    "mtime": 1793876015.3626375,
+    "seen": 1793876251.60427,
+    "ast_hash": "fc925736c662fa4f493bdf89e5eae6f7",
+    "semantic_hash": ""
+  },
+  "src/sections/engineering/Diagrams.tsx": {
+    "mtime": 1793867264.4678235,
+    "seen": 1793868383.395296,
+    "ast_hash": "02f19156976a48f9ff0776493a4e6066",
+    "semantic_hash": "02f19156976a48f9ff0776493a4e6066"
+  },
+  "src/sections/home/Optional.tsx": {
+    "mtime": 1793869323.527379,
+    "seen": 1793869323.6708531,
+    "ast_hash": "a6215886589ae9e1a77de4dce1024291",
+    "semantic_hash": ""
+  },
+  "src/sections/home/Programmes.tsx": {
+    "mtime": 1793876015.3618414,
+    "seen": 1793876251.604277,
+    "ast_hash": "d1369545ac5ba245bcb4e5ab80f29a13",
+    "semantic_hash": ""
+  },
+  "src/sections/medicine/BodyDiagram.tsx": {
+    "mtime": 1793867516.5480337,
+    "seen": 1793868383.395381,
+    "ast_hash": "382e757426f8b1a5248620ed69460099",
+    "semantic_hash": "382e757426f8b1a5248620ed69460099"
+  },
+  "tailwind.config.ts": {
+    "mtime": 1793869194.3672855,
+    "seen": 1793869323.6708548,
+    "ast_hash": "dcce2324aa997e23b6912cb7c6fa3568",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1793867165.4366379,
+    "seen": 1793868383.395419,
+    "ast_hash": "8fd4daa6b8c13d2e816784498ce8cb2f",
+    "semantic_hash": "8fd4daa6b8c13d2e816784498ce8cb2f"
+  },
+  "vite.config.ts": {
+    "mtime": 1793871548.9463015,
+    "seen": 1793872163.258413,
+    "ast_hash": "afeacc15efec685506201204de12253d",
+    "semantic_hash": ""
+  },
+  "src/components/PhotoPanel.tsx": {
+    "mtime": 1793869843.511693,
+    "seen": 1793870096.578294,
+    "ast_hash": "66a92687a2cec26c626522d7185c377e",
+    "semantic_hash": ""
+  },
+  "src/lib/explored.ts": {
+    "mtime": 1793876014.8742654,
+    "seen": 1793876251.604264,
+    "ast_hash": "a334f7fa68bc367356ec3f15fe9e3aae",
+    "semantic_hash": ""
+  },
+  "src/sections/home/CampusSection.tsx": {
+    "mtime": 1793876848.3265786,
+    "seen": 1793877297.591866,
+    "ast_hash": "44e3bc8b0476999aaf2a3b94b9015396",
+    "semantic_hash": ""
+  },
+  "src/sections/home/Discover.tsx": {
+    "mtime": 1793869843.5121038,
+    "seen": 1793870096.578318,
+    "ast_hash": "4ca73ded3f88879c2951a3ddda173723",
+    "semantic_hash": ""
+  },
+  "src/sections/home/Hero.tsx": {
+    "mtime": 1793876078.3196743,
+    "seen": 1793876251.604275,
+    "ast_hash": "3f9f98666eb0536fb5db9e3e81735ee7",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1793868383.4642942,
+    "seen": 1793869323.670858,
+    "ast_hash": "67d88e9d0760c3ba54c75dfd9551c1c5",
+    "semantic_hash": ""
+  },
+  "TODO.md": {
+    "mtime": 1793877296.0424676,
+    "seen": 1793877297.591878,
+    "ast_hash": "ee02c27cca2575a0a38368e598ee05fb",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1793867165.4332507,
+    "seen": 1793869323.670859,
+    "ast_hash": "1d79629135c45adf676286f1c805a1d8",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/campus-aerial.jpg": {
+    "mtime": 1793869193.3593733,
+    "seen": 1793869323.67086,
+    "ast_hash": "f0d3472a3ffdba26b592feeffc0875bf",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/classroom.jpg": {
+    "mtime": 1793869193.3736954,
+    "seen": 1793869323.67086,
+    "ast_hash": "b0c262677e117815749c51714a585c0f",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/convocation.jpg": {
+    "mtime": 1793869193.3783376,
+    "seen": 1793869323.670861,
+    "ast_hash": "abf27426c1c115bd6b169380d4660a3c",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/law-students.jpg": {
+    "mtime": 1793869193.3639612,
+    "seen": 1793869323.6708622,
+    "ast_hash": "3b384633f9cbbf7b51c44d79f753f48f",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/main-gate.jpg": {
+    "mtime": 1793869193.3659506,
+    "seen": 1793869323.6708622,
+    "ast_hash": "089a257408f4ebb212e8f24efb002c12",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/medical-student.jpg": {
+    "mtime": 1793869193.376285,
+    "seen": 1793869323.6708632,
+    "ast_hash": "345e86512d5d452962c0b15fc12a556a",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-aerospace.jpg": {
+    "mtime": 1793869193.4040608,
+    "seen": 1793869323.6708639,
+    "ast_hash": "4b28c67fda6708be87273b22888e4ac2",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-biomedical.jpg": {
+    "mtime": 1793869193.4082992,
+    "seen": 1793869323.6708639,
+    "ast_hash": "0ac862d079bad919ce4d2df5531bdd4b",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-computing.jpg": {
+    "mtime": 1793869193.3997817,
+    "seen": 1793869323.6708648,
+    "ast_hash": "98b6ffd3b69c1ace2e5888d27707ae1a",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-dentistry.jpg": {
+    "mtime": 1793869193.416142,
+    "seen": 1793869323.670866,
+    "ast_hash": "aff94e1127e813d313282feb65395d3e",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-dining.jpg": {
+    "mtime": 1793869193.3914182,
+    "seen": 1793869323.670866,
+    "ast_hash": "ced009c2d73c235454adb73f89d2485e",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-electronics.jpg": {
+    "mtime": 1793869193.4062858,
+    "seen": 1793869323.670867,
+    "ast_hash": "dba84f927c129f8b544a6be0150aac14",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-festival.jpg": {
+    "mtime": 1793869193.389084,
+    "seen": 1793869323.670867,
+    "ast_hash": "b9b50cb41be8720e609737fab5e0fdbb",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-health.jpg": {
+    "mtime": 1793869193.429373,
+    "seen": 1793869323.670868,
+    "ast_hash": "41b689995ccafcc4ddf0cf7c0aa3a31d",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-hostel.jpg": {
+    "mtime": 1793869193.3811326,
+    "seen": 1793869323.6708689,
+    "ast_hash": "6d33f848ed0cce3392e8864d188ca593",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-library.jpg": {
+    "mtime": 1793869193.3935502,
+    "seen": 1793869323.6708689,
+    "ast_hash": "d9606ca91da40e266b10b9610582aca1",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-mechanical.jpg": {
+    "mtime": 1793869193.4019547,
+    "seen": 1793869323.67087,
+    "ast_hash": "feb48ac56bf1dc6d9c4bd6cd522e479b",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-nursing.jpg": {
+    "mtime": 1793869193.4264648,
+    "seen": 1793869323.670871,
+    "ast_hash": "a93c60805f5af8ec15a1a4323f611104",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-pharmacy.jpg": {
+    "mtime": 1793869193.4188435,
+    "seen": 1793869323.670871,
+    "ast_hash": "f8110a0396d9597bf3364bc21036d00e",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-physio.jpg": {
+    "mtime": 1793869193.4209242,
+    "seen": 1793869323.670872,
+    "ast_hash": "a023d2ab5a1be90ccafd84107435ea35",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-research.jpg": {
+    "mtime": 1793869193.3978093,
+    "seen": 1793869323.6708732,
+    "ast_hash": "cf14c1e5ecb4143b2b709630cf4dc61b",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-science.jpg": {
+    "mtime": 1793869193.3956766,
+    "seen": 1793869323.6708732,
+    "ast_hash": "8af5fed5255ec1e7f9b888bb205e2aaa",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-sports.jpg": {
+    "mtime": 1793869193.3869011,
+    "seen": 1793869323.670874,
+    "ast_hash": "2cf96fd51f181551bf02ebdcf4d0e915",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-surgery.jpg": {
+    "mtime": 1793869193.4133408,
+    "seen": 1793869323.6708748,
+    "ast_hash": "dd9d0dc64bf68a82c49700642c7e4c1f",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/stock-therapy.jpg": {
+    "mtime": 1793869193.4232194,
+    "seen": 1793869323.6708748,
+    "ast_hash": "be371b2768cb720753166a7a2a25116c",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/students-steps.jpg": {
+    "mtime": 1793869193.3699467,
+    "seen": 1793869323.6708758,
+    "ast_hash": "20fa79c05b24fb34c16966696381954d",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/tech-park-steps.jpg": {
+    "mtime": 1793869193.3618307,
+    "seen": 1793869323.670877,
+    "ast_hash": "006b44dc41599403aa96736e02d67c71",
+    "semantic_hash": ""
+  },
+  "src/assets/photos/tech-park-tower.jpg": {
+    "mtime": 1793869193.3678794,
+    "seen": 1793869323.670877,
+    "ast_hash": "574d2f69d8bc7dee57ec5687d8fb865e",
+    "semantic_hash": ""
+  },
+  "src/assets/srm-seal.png": {
+    "mtime": 1793867165.4255533,
+    "seen": 1793869323.670878,
+    "ast_hash": "d6a8b8228293725404425b5ec07cec90",
+    "semantic_hash": ""
+  },
+  "scripts/ask_screenshots.mjs": {
+    "mtime": 1793871951.0629678,
+    "seen": 1793872163.2583659,
+    "ast_hash": "74676f71febabe7ec42d44e8a754bc8f",
+    "semantic_hash": ""
+  },
+  "src/components/ask/AskAnswer.tsx": {
+    "mtime": 1793871548.9634483,
+    "seen": 1793872163.25838,
+    "ast_hash": "67f21741963a71122f2d79f8f8243ed4",
+    "semantic_hash": ""
+  },
+  "src/components/ask/AskBar.tsx": {
+    "mtime": 1793876015.3619683,
+    "seen": 1793876251.604247,
+    "ast_hash": "178c8aac83424db0196a36c4adefcb4d",
+    "semantic_hash": ""
+  },
+  "src/components/ask/AskExamples.tsx": {
+    "mtime": 1793876015.362052,
+    "seen": 1793876251.604248,
+    "ast_hash": "6deb0b006526497c5fc3eec1f20cec0f",
+    "semantic_hash": ""
+  },
+  "src/components/ask/AskFeedback.tsx": {
+    "mtime": 1793871548.9692,
+    "seen": 1793872163.258382,
+    "ast_hash": "43aee63afbf623efbbdd6e18d33a1fcb",
+    "semantic_hash": ""
+  },
+  "src/components/ask/AskPanel.tsx": {
+    "mtime": 1793871873.453469,
+    "seen": 1793872163.258385,
+    "ast_hash": "587c0bf46a019bd520b7511fe3a5e0c9",
+    "semantic_hash": ""
+  },
+  "src/components/ask/AskProvider.tsx": {
+    "mtime": 1793871548.9559,
+    "seen": 1793872163.258385,
+    "ast_hash": "63ac7ab59c4b6c3537ab709c8326b2d9",
+    "semantic_hash": ""
+  },
+  "src/components/ask/AskTrigger.tsx": {
+    "mtime": 1793871548.9577725,
+    "seen": 1793872163.258386,
+    "ast_hash": "92998349e5b142a708698a3615d044f2",
+    "semantic_hash": ""
+  },
+  "src/data/askExamples.json": {
+    "mtime": 1793875900.1463468,
+    "seen": 1793876007.111074,
+    "ast_hash": "20f46fa1222b154d4c75e1b0b8681090",
+    "semantic_hash": ""
+  },
+  "src/lib/askSrm.ts": {
+    "mtime": 1793871548.9536622,
+    "seen": 1793872163.2583969,
+    "ast_hash": "43bd5e9cd996fb399dd6619cfcf5f419",
+    "semantic_hash": ""
+  },
+  "src/components/Breadcrumb.tsx": {
+    "mtime": 1793876015.385926,
+    "seen": 1793876251.604238,
+    "ast_hash": "d3ce9ceb71aca7596f06c1be4dbbf3a4",
+    "semantic_hash": ""
+  },
+  "src/lib/intro.ts": {
+    "mtime": 1793876014.8716261,
+    "seen": 1793876251.604264,
+    "ast_hash": "70afa52b5cf2a8466981890e0389d122",
+    "semantic_hash": ""
+  },
+  "src/sections/home/Preloader.tsx": {
+    "mtime": 1793876034.3913763,
+    "seen": 1793876251.604276,
+    "ast_hash": "6f96cf14b19fcba9ee0a38ab51c507e5",
+    "semantic_hash": ""
+  },
+  "src/components/Toast.tsx": {
+    "mtime": 1793876941.7110057,
+    "seen": 1793877297.591838,
+    "ast_hash": "9a61382b5d1058887ac7fea899e34013",
+    "semantic_hash": ""
+  },
+  "src/lib/iso.ts": {
+    "mtime": 1793876601.788239,
+    "seen": 1793877297.59186,
+    "ast_hash": "ff791a22edd337e0044bd2a2f1d89bfe",
+    "semantic_hash": ""
+  },
+  "src/sections/home/campus/CampusMap.tsx": {
+    "mtime": 1793877209.2765741,
+    "seen": 1793877297.591871,
+    "ast_hash": "4a1da5c217b62fc42766d641eef52608",
+    "semantic_hash": ""
+  },
+  "src/sections/home/campus/Life.tsx": {
+    "mtime": 1793876740.5297148,
+    "seen": 1793877297.591871,
+    "ast_hash": "978702011948c1e390105e41e99c7db8",
+    "semantic_hash": ""
+  },
+  "src/sections/home/campus/buildings.ts": {
+    "mtime": 1793876941.710562,
+    "seen": 1793877297.591872,
+    "ast_hash": "3c80c9b729c8095405b1a883339b2ea1",
+    "semantic_hash": ""
+  },
+  "src/sections/home/campus/pen.ts": {
+    "mtime": 1793876941.710169,
+    "seen": 1793877297.591873,
+    "ast_hash": "24341cd62b70151aaef8d272a0e69018",
+    "semantic_hash": ""
+  },
+  "src/sections/home/campus/scene.ts": {
+    "mtime": 1793876941.7108011,
+    "seen": 1793877297.591873,
+    "ast_hash": "ab1a4f33d454e88764af0598a3b82837",
+    "semantic_hash": ""
+  }
+}

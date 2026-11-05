@@ -1,0 +1,359 @@
+{
+  "hero": {
+    "eyebrow": "Medicine & Health Sciences · KTR",
+    "lines": [
+      "Advancing",
+      "healthcare.",
+      "Shaping"
+    ],
+    "accent": "tomorrow.",
+    "sub": "Where scientific discovery meets compassionate care. Explore a new generation of medical education, clinical excellence and healthcare innovation.",
+    "hospital": [
+      "SRM Medical College Hospital & Research Centre",
+      "Kattankulathur"
+    ]
+  },
+  "about": {
+    "body": "SRM is one of the largest multidisciplinary higher educational institutions in India. Imparting education since 1985, SRM offers programmes in Engineering & Technology, Medicine, Dentistry and other Health Sciences, Science & Humanities, Management, Law, Agricultural Sciences and Hotel Management.",
+    "facts": [
+      "Flagship campus in Kattankulathur, about 30 minutes from Chennai",
+      "Campus spans more than 250 acres",
+      "Students from over 95 countries"
+    ],
+    "stats": [
+      {
+        "value": "45,000+",
+        "label": "Students"
+      },
+      {
+        "value": "8",
+        "label": "Campuses"
+      },
+      {
+        "value": "5",
+        "label": "States"
+      },
+      {
+        "value": "300+",
+        "label": "Programmes"
+      },
+      {
+        "value": "95+",
+        "label": "Countries"
+      },
+      {
+        "value": "250+",
+        "label": "Acres"
+      }
+    ],
+    "statsNote": "Institution-wide SRM figures.",
+    "ranks": [
+      {
+        "label": "Medical",
+        "rank": 18
+      },
+      {
+        "label": "Dental",
+        "rank": 8
+      },
+      {
+        "label": "Pharmacy",
+        "rank": 10
+      },
+      {
+        "label": "University",
+        "rank": 11
+      },
+      {
+        "label": "Engineering",
+        "rank": 14
+      },
+      {
+        "label": "Overall",
+        "rank": 22
+      },
+      {
+        "label": "Research",
+        "rank": 25
+      }
+    ],
+    "ranksNote": "These are SRM institutional NIRF 2025 rankings, not rankings specific to Medicine & Health Sciences alone."
+  },
+  "systems": [
+    {
+      "n": "01",
+      "t": "Nervous system",
+      "d": "The brain, spinal cord and nerves carry signals that control movement, sensation, thought and the work of every organ.",
+      "related": [
+        "Medicine",
+        "Physiotherapy",
+        "Occupational Therapy"
+      ],
+      "learn": [
+        "Neuroanatomy and neurophysiology",
+        "Clinical neurological examination",
+        "Rehabilitation after neurological injury"
+      ]
+    },
+    {
+      "n": "02",
+      "t": "Cardiovascular system",
+      "d": "The heart pumps blood through arteries and veins, delivering oxygen and nutrients and removing waste from tissues.",
+      "related": [
+        "Medicine",
+        "Nursing",
+        "Pharmacy"
+      ],
+      "learn": [
+        "Cardiac anatomy and physiology",
+        "ECG interpretation",
+        "Cardiovascular pharmacology"
+      ]
+    },
+    {
+      "n": "03",
+      "t": "Respiratory system",
+      "d": "The airways and lungs bring oxygen into the blood and remove carbon dioxide with every breath.",
+      "related": [
+        "Medicine",
+        "Physiotherapy",
+        "Nursing"
+      ],
+      "learn": [
+        "Lung function testing",
+        "Respiratory physiotherapy",
+        "Airway management"
+      ]
+    },
+    {
+      "n": "04",
+      "t": "Skeletal system",
+      "d": "Bones and joints give the body its structure, protect organs, store minerals and make movement possible.",
+      "related": [
+        "Medicine",
+        "Physiotherapy",
+        "Dentistry"
+      ],
+      "learn": [
+        "Osteology",
+        "Musculoskeletal imaging",
+        "Orthopaedic assessment"
+      ]
+    },
+    {
+      "n": "05",
+      "t": "Muscular system",
+      "d": "Skeletal, cardiac and smooth muscle produce movement, maintain posture and keep internal organs working.",
+      "related": [
+        "Physiotherapy",
+        "Occupational Therapy",
+        "Medicine"
+      ],
+      "learn": [
+        "Kinesiology and biomechanics",
+        "Exercise therapy",
+        "Functional assessment"
+      ]
+    },
+    {
+      "n": "06",
+      "t": "Digestive system",
+      "d": "From the mouth to the intestines, the digestive tract breaks down food, absorbs nutrients and removes waste.",
+      "related": [
+        "Medicine",
+        "Dentistry",
+        "Public Health"
+      ],
+      "learn": [
+        "Gastrointestinal physiology",
+        "Oral health and nutrition",
+        "Community nutrition"
+      ]
+    }
+  ],
+  "schools": [
+    {
+      "n": "01",
+      "t": "Medicine",
+      "d": "Clinical science and patient care.",
+      "href": "https://medical.srmist.edu.in/"
+    },
+    {
+      "n": "02",
+      "t": "Dentistry",
+      "d": "Oral health and dental sciences.",
+      "href": "https://dental.srmist.edu.in/"
+    },
+    {
+      "n": "03",
+      "t": "Pharmacy",
+      "d": "Medicines and pharmaceutical innovation.",
+      "href": "https://www.srmist.edu.in/department/college-of-pharmacy/"
+    },
+    {
+      "n": "04",
+      "t": "Physiotherapy",
+      "d": "Movement and rehabilitation.",
+      "href": "https://www.srmist.edu.in/department/college-of-physiotherapy"
+    },
+    {
+      "n": "05",
+      "t": "Occupational Therapy",
+      "d": "Independence and everyday living.",
+      "href": "https://www.srmist.edu.in/department/college-of-occupational-therapy/"
+    },
+    {
+      "n": "06",
+      "t": "Nursing",
+      "d": "Compassionate and evidence-based care.",
+      "href": "https://www.srmist.edu.in/department/college-of-nursing/"
+    },
+    {
+      "n": "07",
+      "t": "Public Health",
+      "d": "Healthier communities and population wellbeing.",
+      "href": "https://www.srmist.edu.in/srm-school-of-public-health"
+    }
+  ],
+  "journey": [
+    {
+      "n": "01",
+      "t": "Learning",
+      "text": "Foundations in science and clinical reasoning.",
+      "points": [
+        "Basic medical sciences in the classroom and lab",
+        "Anatomy, physiology and biochemistry foundations",
+        "Early introduction to clinical reasoning"
+      ]
+    },
+    {
+      "n": "02",
+      "t": "Practice",
+      "text": "Supervised training in clinical environments.",
+      "points": [
+        "Faculty-guided clinical teaching",
+        "Supervised practical training",
+        "Hospital exposure at SRM Medical College Hospital & Research Centre"
+      ]
+    },
+    {
+      "n": "03",
+      "t": "Research",
+      "text": "Questions from the ward carried into the lab.",
+      "points": [
+        "Clinical questions turned into research projects",
+        "Work alongside research-oriented faculty",
+        "Findings shared through MedXplore"
+      ]
+    },
+    {
+      "n": "04",
+      "t": "Care",
+      "text": "Patient-centred service for the community.",
+      "points": [
+        "Patient-centred learning environments",
+        "Community outreach",
+        "Healthcare built together, across disciplines"
+      ]
+    }
+  ],
+  "clinicalIntro": "SRM Medical College Hospital & Research Centre connects academic learning with practical experience, so students train in real clinical settings alongside experienced healthcare professionals.",
+  "research": {
+    "intro": "Research across the institution is organised through Centres of Excellence and shared through MedXplore, which brings together research stories from across SRM.",
+    "stats": [
+      {
+        "value": "25,000+",
+        "label": "Publications",
+        "note": "SRM institution-wide"
+      },
+      {
+        "value": "₹300+ Cr",
+        "label": "Research funding",
+        "note": "SRM institution-wide"
+      },
+      {
+        "value": "100+",
+        "label": "Patents",
+        "note": "SRM institution-wide"
+      }
+    ],
+    "areas": [
+      {
+        "n": "01",
+        "t": "Institutional Centres of Excellence",
+        "k": "Centres",
+        "d": "Focused research centres across the institution.",
+        "href": "https://www.srmist.edu.in/research/",
+        "cta": "Explore research at SRM"
+      },
+      {
+        "n": "02",
+        "t": "MedXplore: SRM Research Stories",
+        "k": "Stories",
+        "d": "Research highlights and stories from our community.",
+        "href": "https://www.srmist.edu.in/research/highlights/",
+        "cta": "Read research highlights"
+      },
+      {
+        "n": "03",
+        "t": "Division of Medical Research",
+        "k": "Medical research",
+        "d": "The institution's dedicated division for medical research.",
+        "href": "https://medicalresearch.srmist.edu.in/",
+        "cta": "Visit the division"
+      },
+      {
+        "n": "04",
+        "t": "SRM DBT Platform",
+        "k": "Biotechnology",
+        "d": "A shared research platform supported under bio engineering.",
+        "href": "https://www.srmist.edu.in/department/srm-dbt-platform/",
+        "cta": "Visit the platform"
+      }
+    ]
+  },
+  "admissions": [
+    {
+      "t": "Application 2026–2027",
+      "d": "NEET Admissions · Undergraduate medical admissions.",
+      "k": "UG",
+      "href": "https://medical.srmist.edu.in/campaign/mbbs-md-ms-2026-27/"
+    },
+    {
+      "t": "MD/MS Admissions 2026",
+      "d": "NEET Admissions · Postgraduate medical admissions.",
+      "k": "PG",
+      "href": "https://medical.srmist.edu.in/campaign/mbbs-md-ms-2026-27/"
+    },
+    {
+      "t": "Super Specialty (DM/MCh) 2025",
+      "d": "NEET Admissions · Super Specialty admissions.",
+      "k": "PG",
+      "href": "https://medical.srmist.edu.in/campaign/mbbs-md-ms-2025-26/images/download/DM-MCh-Super-Speciality-2025.pdf"
+    },
+    {
+      "t": "MHS PhD Admissions",
+      "d": "PhD Admissions · Doctoral research programmes.",
+      "k": "PhD",
+      "href": "https://www.srmist.edu.in/admission-india/"
+    }
+  ],
+  "tour": "https://webstor.srmist.edu.in/web_assets/srmist-virtual-tour-vo/index.htm",
+  "hours": "Mon–Fri, 9:00 AM–5:00 PM",
+  "helplines": [
+    "+91 7026472647",
+    "7418905444",
+    "7418907444",
+    "9791938654"
+  ],
+  "contact": {
+    "hospital": "SRM Nagar, Potheri, Chengalpattu, Tamil Nadu 603203.",
+    "office": "No. 3 Veerasamy Street, Mambalam, Chennai, Tamil Nadu 600033.",
+    "email": "dean.medical.ktr@srmist.edu.in",
+    "phone": {
+      "t": "+91 70 2647 2647",
+      "href": "tel:+917026472647"
+    },
+    "apply": "https://medical.srmist.edu.in/campaign/mbbs-md-ms-2026-27/"
+  }
+}

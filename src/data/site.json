@@ -1,0 +1,270 @@
+{
+  "institute": "Institute of Science & Technology",
+  "fullName": "SRM Institute of Science and Technology",
+  "address": "SRM Nagar, Kattankulathur, Chengalpattu District – 603 203",
+  "phone": {
+    "label": "+91-44-27417000",
+    "href": "tel:+914427417000"
+  },
+  "applyUrl": "https://applications.srmist.edu.in/",
+  "admissionsUrl": "https://www.srmist.edu.in/admission-india/",
+  "headers": {
+    "home": {
+      "division": "Institute of Science & Technology",
+      "sub": "Kattankulathur, Chennai",
+      "utility": [
+        {
+          "t": "Students",
+          "href": "https://www.srmist.edu.in/students/"
+        },
+        {
+          "t": "Faculty & Staff",
+          "href": "https://www.srmist.edu.in/faculty-gateway"
+        },
+        {
+          "t": "Parents",
+          "href": "https://www.srmist.edu.in/parents/"
+        },
+        {
+          "t": "Visitors",
+          "href": "https://www.srmist.edu.in/visitors/"
+        },
+        {
+          "t": "Alumni",
+          "href": "https://alumni.srmist.edu.in/"
+        },
+        {
+          "t": "Examinations",
+          "href": "https://www.srmist.edu.in/controller-of-examinations/"
+        }
+      ],
+      "nav": [
+        {
+          "t": "Programmes",
+          "to": "/#programmes"
+        },
+        {
+          "t": "Admissions",
+          "to": "/#admissions"
+        },
+        {
+          "t": "Campus Life",
+          "to": "/#life"
+        },
+        {
+          "t": "Research",
+          "to": "/#research"
+        },
+        {
+          "t": "Placements",
+          "to": "/#placements"
+        },
+        {
+          "t": "About",
+          "to": "/learn-leap-lead"
+        }
+      ],
+      "apply": {
+        "t": "Apply Now",
+        "href": "https://applications.srmist.edu.in/"
+      }
+    },
+    "engineering": {
+      "division": "Institute of Science & Technology",
+      "sub": "(Deemed to be University u/s 3 of UGC Act, 1956)",
+      "utility": [
+        {
+          "t": "Students",
+          "href": "https://www.srmist.edu.in/students/"
+        },
+        {
+          "t": "Faculty & Staff",
+          "href": "https://www.srmist.edu.in/faculty-gateway"
+        },
+        {
+          "t": "Parents",
+          "href": "https://www.srmist.edu.in/parents/"
+        },
+        {
+          "t": "Visitors",
+          "href": "https://www.srmist.edu.in/visitors/"
+        },
+        {
+          "t": "Alumni",
+          "href": "https://alumni.srmist.edu.in/"
+        },
+        {
+          "t": "Examinations",
+          "href": "https://www.srmist.edu.in/controller-of-examinations/"
+        }
+      ],
+      "nav": [
+        {
+          "t": "Academics",
+          "to": "/engineering#departments"
+        },
+        {
+          "t": "Disciplines",
+          "to": "/engineering#disciplines"
+        },
+        {
+          "t": "Research",
+          "to": "/engineering#research"
+        },
+        {
+          "t": "Careers",
+          "to": "/engineering#careers"
+        }
+      ],
+      "apply": {
+        "t": "Admissions 2027",
+        "href": "https://applications.srmist.edu.in/"
+      },
+      "crumb": [
+        "Faculty of Engineering & Technology",
+        "Kattankulathur, Chennai"
+      ]
+    },
+    "medicine": {
+      "division": "Medicine & Health Sciences",
+      "sub": "SRM Institute of Science & Technology",
+      "utility": [
+        {
+          "t": "NMC"
+        },
+        {
+          "t": "Associated Hospital"
+        },
+        {
+          "t": "Medical Programme Regulations"
+        },
+        {
+          "t": "UGC"
+        },
+        {
+          "t": "Anti-Ragging Cell"
+        },
+        {
+          "t": "ECHS"
+        }
+      ],
+      "nav": [
+        {
+          "t": "Programmes",
+          "to": "/medicine#programmes"
+        },
+        {
+          "t": "Anatomy",
+          "to": "/medicine#anatomy"
+        },
+        {
+          "t": "Clinical",
+          "to": "/medicine#clinical"
+        },
+        {
+          "t": "Research",
+          "to": "/medicine#research"
+        },
+        {
+          "t": "About",
+          "to": "/medicine#about"
+        }
+      ],
+      "apply": {
+        "t": "Admissions 2026–27",
+        "href": "https://medical.srmist.edu.in/campaign/mbbs-md-ms-2026-27/"
+      },
+      "crumb": [
+        "Medicine & Health Sciences",
+        "Kattankulathur, Chennai"
+      ]
+    }
+  },
+  "footer": [
+    {
+      "h": "Admissions & aid",
+      "l": [
+        {
+          "t": "Scholarships",
+          "href": "https://www.srmist.edu.in/admission-india/engineering/scholarships/"
+        },
+        {
+          "t": "Admission India",
+          "href": "https://www.srmist.edu.in/admission-india/"
+        },
+        {
+          "t": "Admission International",
+          "href": "https://www.srmist.edu.in/admission-international/"
+        },
+        {
+          "t": "Brochure",
+          "href": "https://webstor.srmist.edu.in/web_assets/downloads/2026/srm-admission-brochure-2026-2027.pdf"
+        }
+      ]
+    },
+    {
+      "h": "Colleges @ KTR",
+      "l": [
+        {
+          "t": "Engineering & Technology",
+          "href": "https://www.srmist.edu.in/college/college-of-engineering-technology/"
+        },
+        {
+          "t": "Medical & Health Sciences",
+          "href": "https://www.srmist.edu.in/college/medicine-and-health-sciences/"
+        },
+        {
+          "t": "Management",
+          "href": "https://www.srmist.edu.in/college/college-of-management/"
+        },
+        {
+          "t": "Science & Humanities",
+          "href": "https://www.srmist.edu.in/college/college-of-science-and-humanities/"
+        }
+      ]
+    },
+    {
+      "h": "Quicklinks",
+      "l": [
+        {
+          "t": "Departments",
+          "href": "https://www.srmist.edu.in/departments/"
+        },
+        {
+          "t": "Programmes",
+          "href": "https://www.srmist.edu.in/program-finder/"
+        },
+        {
+          "t": "Faculty search",
+          "href": "https://www.srmist.edu.in/staff-finder/"
+        },
+        {
+          "t": "Innovation & Incubation",
+          "href": "https://www.srmist.edu.in/research/innovation-incubation/"
+        }
+      ]
+    },
+    {
+      "h": "Visitors",
+      "l": [
+        {
+          "t": "Virtual tour 360°",
+          "href": "https://webstor.srmist.edu.in/web_assets/srmist-virtual-tour-vo/index.htm"
+        },
+        {
+          "t": "How to reach",
+          "href": "https://www.srmist.edu.in/visitors/"
+        },
+        {
+          "t": "News",
+          "href": "https://www.srmist.edu.in/news"
+        },
+        {
+          "t": "Events",
+          "href": "https://www.srmist.edu.in/events"
+        }
+      ]
+    }
+  ],
+  "stockNote": "Some images are illustrative stock photographs, not pictures of SRM."
+}

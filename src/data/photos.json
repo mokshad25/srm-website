@@ -1,0 +1,303 @@
+{
+  "photos": [
+    {
+      "id": "campus-aerial",
+      "file": "campus-aerial.jpg",
+      "width": 1200,
+      "height": 370,
+      "alt": "Aerial view of the SRM Kattankulathur campus beside the lake",
+      "source": "srm"
+    },
+    {
+      "id": "tech-park-steps",
+      "file": "tech-park-steps.jpg",
+      "width": 726,
+      "height": 422,
+      "alt": "Students walking up the steps of the SRM Tech Park",
+      "source": "srm"
+    },
+    {
+      "id": "law-students",
+      "file": "law-students.jpg",
+      "width": 680,
+      "height": 451,
+      "alt": "Law students with their books outside the SRM School of Law",
+      "source": "srm"
+    },
+    {
+      "id": "main-gate",
+      "file": "main-gate.jpg",
+      "width": 738,
+      "height": 333,
+      "alt": "The arched gateway of SRM University",
+      "source": "srm"
+    },
+    {
+      "id": "tech-park-tower",
+      "file": "tech-park-tower.jpg",
+      "width": 387,
+      "height": 516,
+      "alt": "The SRM Tech Park tower against a blue sky",
+      "source": "srm"
+    },
+    {
+      "id": "students-steps",
+      "file": "students-steps.jpg",
+      "width": 678,
+      "height": 452,
+      "alt": "Students talking together on the campus steps",
+      "source": "srm"
+    },
+    {
+      "id": "classroom",
+      "file": "classroom.jpg",
+      "width": 738,
+      "height": 414,
+      "alt": "Students in formal wear attending a class",
+      "source": "srm"
+    },
+    {
+      "id": "medical-student",
+      "file": "medical-student.jpg",
+      "width": 538,
+      "height": 367,
+      "alt": "A student in a white coat in a classroom",
+      "source": "srm"
+    },
+    {
+      "id": "convocation",
+      "file": "convocation.jpg",
+      "width": 596,
+      "height": 335,
+      "alt": "A graduate receiving a certificate on stage at convocation",
+      "source": "srm"
+    },
+    {
+      "id": "stock-hostel",
+      "file": "stock-hostel.jpg",
+      "width": 1600,
+      "height": 1068,
+      "alt": "Illustrative photo of a shared room with bunk beds",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/black-metal-bunk-bed-WQJvWU_HZFo"
+    },
+    {
+      "id": "stock-sports",
+      "file": "stock-sports.jpg",
+      "width": 1600,
+      "height": 1067,
+      "alt": "Illustrative photo of a sprinter on a running track",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/man-on-running-field-9HI8UJMSdZA"
+    },
+    {
+      "id": "stock-festival",
+      "file": "stock-festival.jpg",
+      "width": 1600,
+      "height": 1067,
+      "alt": "Illustrative photo of dancers in traditional dress",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/five-dancers-in-colorful-traditional-indian-attire-on-steps-ImmubOS8GjY"
+    },
+    {
+      "id": "stock-dining",
+      "file": "stock-dining.jpg",
+      "width": 1600,
+      "height": 1200,
+      "alt": "Illustrative photo of people eating in a large dining hall",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/group-of-person-eating-on-restaurant-v8ViDmlOI9Q"
+    },
+    {
+      "id": "stock-library",
+      "file": "stock-library.jpg",
+      "width": 1600,
+      "height": 1200,
+      "alt": "Illustrative photo of a bright library reading room",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/library-interior-with-bookshelves-and-tables-n4y3eiQSIoc"
+    },
+    {
+      "id": "stock-science",
+      "file": "stock-science.jpg",
+      "width": 1600,
+      "height": 1067,
+      "alt": "Illustrative photo of glass beakers on a lab bench",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/three-clear-beakers-placed-on-tabletop-lQGJCMY5qcM"
+    },
+    {
+      "id": "stock-research",
+      "file": "stock-research.jpg",
+      "width": 1600,
+      "height": 1004,
+      "alt": "Illustrative photo of a scientist using a pipette",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/scientist-using-pipette-with-test-tubes-in-lab-RlOAwXt2fEA"
+    },
+    {
+      "id": "stock-computing",
+      "file": "stock-computing.jpg",
+      "width": 1600,
+      "height": 1068,
+      "alt": "Illustrative photo of code on a monitor",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/monitor-showing-java-programming-OqtafYT5kTw"
+    },
+    {
+      "id": "stock-mechanical",
+      "file": "stock-mechanical.jpg",
+      "width": 1600,
+      "height": 1200,
+      "alt": "Illustrative photo of heavy machinery in an industrial hall",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/gray-metal-industrial-machine-djdoRnnKLyo"
+    },
+    {
+      "id": "stock-aerospace",
+      "file": "stock-aerospace.jpg",
+      "width": 1600,
+      "height": 1067,
+      "alt": "Illustrative photo of a jet engine turbine",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/black-and-white-airliner-turbine-yqeXLR81Uj0"
+    },
+    {
+      "id": "stock-electronics",
+      "file": "stock-electronics.jpg",
+      "width": 1600,
+      "height": 1067,
+      "alt": "Illustrative close-up of a circuit board",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/macro-photography-of-black-circuit-board-FO7JIlwjOtU"
+    },
+    {
+      "id": "stock-biomedical",
+      "file": "stock-biomedical.jpg",
+      "width": 1600,
+      "height": 1067,
+      "alt": "Illustrative photo of a stethoscope beside a laptop",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/person-sitting-while-using-laptop-computer-and-green-stethoscope-near-NFvdKIhxYlU"
+    },
+    {
+      "id": "stock-surgery",
+      "file": "stock-surgery.jpg",
+      "width": 1600,
+      "height": 1697,
+      "alt": "Illustrative photo of surgeons in an operating theatre",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/surgeons-performing-surgery-in-operating-room-tMFeatBSS4s"
+    },
+    {
+      "id": "stock-dentistry",
+      "file": "stock-dentistry.jpg",
+      "width": 1600,
+      "height": 1200,
+      "alt": "Illustrative photo of a dental examination",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/dental-exam-with-mirror-and-tool-8BkF0sTC6Uo"
+    },
+    {
+      "id": "stock-pharmacy",
+      "file": "stock-pharmacy.jpg",
+      "width": 1600,
+      "height": 1057,
+      "alt": "Illustrative photo of medicine blister packs",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/a-pile-of-pills-sitting-next-to-each-other-on-top-of-a-table-RS0-h_pyByk"
+    },
+    {
+      "id": "stock-physio",
+      "file": "stock-physio.jpg",
+      "width": 1600,
+      "height": 1067,
+      "alt": "Illustrative photo of a physiotherapist treating a knee",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/a-man-getting-his-leg-examined-by-a-doctor-pbUWW-CBoqY"
+    },
+    {
+      "id": "stock-therapy",
+      "file": "stock-therapy.jpg",
+      "width": 1600,
+      "height": 1131,
+      "alt": "Illustrative photo of a carer doing a craft activity with older adults",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/caregiver-assisting-elderly-women-with-knitting-activity-D394dKgOjec"
+    },
+    {
+      "id": "stock-nursing",
+      "file": "stock-nursing.jpg",
+      "width": 1600,
+      "height": 1186,
+      "alt": "Illustrative photo of a nurse on a ward",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/woman-in-white-button-up-shirt-and-blue-stethoscope-l0j0DHVWcIE"
+    },
+    {
+      "id": "stock-health",
+      "file": "stock-health.jpg",
+      "width": 1600,
+      "height": 2416,
+      "alt": "Illustrative photo of hands placed together on a tree",
+      "source": "stock",
+      "licence": "Unsplash License",
+      "url": "https://unsplash.com/photos/a-group-of-people-holding-hands-on-top-of-a-tree-DNkoNXQti3c"
+    }
+  ],
+  "slots": {
+    "home.hero": "campus-aerial",
+    "home.discover-1": "tech-park-steps",
+    "home.discover-2": "medical-student",
+    "home.discover-3": "classroom",
+    "home.discover-4": "stock-science",
+    "home.discover-5": "main-gate",
+    "home.discover-6": "stock-research",
+    "home.life-hostels": "stock-hostel",
+    "home.life-sports": "stock-sports",
+    "home.life-clubs": "law-students",
+    "home.life-festivals": "stock-festival",
+    "home.life-dining": "stock-dining",
+    "home.life-library": "stock-library",
+    "home.life-communities": "students-steps",
+    "campus.tech": "tech-park-tower",
+    "engineering.hero": "tech-park-steps",
+    "engineering.disc-1": "stock-computing",
+    "engineering.disc-2": "stock-mechanical",
+    "engineering.disc-3": "stock-aerospace",
+    "engineering.disc-4": "stock-electronics",
+    "engineering.disc-5": "tech-park-tower",
+    "engineering.disc-6": "stock-biomedical",
+    "medicine.hero": "medical-student",
+    "medicine.about": "campus-aerial",
+    "medicine.school-1": "stock-surgery",
+    "medicine.school-2": "stock-dentistry",
+    "medicine.school-3": "stock-pharmacy",
+    "medicine.school-4": "stock-physio",
+    "medicine.school-5": "stock-therapy",
+    "medicine.school-6": "stock-nursing",
+    "medicine.school-7": "stock-health",
+    "learn.hero": "main-gate",
+    "learn.learn": "classroom",
+    "learn.leap": "tech-park-steps",
+    "learn.lead": "convocation"
+  }
+}

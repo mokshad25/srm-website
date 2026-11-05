@@ -1,0 +1,401 @@
+{
+  "hero": {
+    "eyebrow": "Faculty of Engineering & Technology · KTR",
+    "lines": [
+      "Engineering",
+      "what's"
+    ],
+    "accent": "next.",
+    "sub": "From ambitious ideas to real-world breakthroughs. Explore the people, disciplines and innovations shaping tomorrow.",
+    "coords": "12.82° N · 80.04° E"
+  },
+  "glance": {
+    "label": "01 · Engineering at a glance",
+    "body": "SRMIST's engineering programmes aim to be at the forefront of innovation and foster multidisciplinary collaboration on pressing global problems. Collaboration with over 50 of the world's best universities and 215 corporates strengthens academic and research programmes.",
+    "attribution": "— In the words of our Founder & Chancellor",
+    "stats": [
+      {
+        "value": "7",
+        "label": "Schools",
+        "note": "Each headed by a Dean"
+      },
+      {
+        "value": "22",
+        "label": "Departments",
+        "note": "Grouped by domain expertise"
+      },
+      {
+        "value": "50+",
+        "label": "Partner universities",
+        "note": "Among the world's best"
+      },
+      {
+        "value": "215",
+        "label": "Corporate collaborators",
+        "note": "Strengthening academics and research"
+      }
+    ],
+    "ideal": "Inter-Disciplinary Experiential Active Learning, the core teaching philosophy at SRMIST.",
+    "paths": [
+      {
+        "n": "Pathway I",
+        "t": "Major",
+        "d": "Go deep in one engineering discipline."
+      },
+      {
+        "n": "Pathway II",
+        "t": "Major + Specialisation",
+        "d": "Add a focused track inside your discipline."
+      },
+      {
+        "n": "Pathway III",
+        "t": "Major + Minor",
+        "d": "Pair your major with a minor from another field."
+      }
+    ]
+  },
+  "disciplines": [
+    {
+      "n": "01",
+      "t": "Computing, AI & Data",
+      "dept": "Computing Technologies · Computational Intelligence · Data Science",
+      "desc": "Algorithms, networks and data systems that power modern engineering.",
+      "href": "https://www.srmist.edu.in/department/department-of-computing-technologies"
+    },
+    {
+      "n": "02",
+      "t": "Mechanical & Automobile",
+      "dept": "Mechanical · Automobile · Mechatronics",
+      "desc": "Machines, vehicles and manufacturing, designed and tested hands-on.",
+      "href": "https://www.srmist.edu.in/department/department-of-mechanical-engineering"
+    },
+    {
+      "n": "03",
+      "t": "Aerospace Engineering",
+      "dept": "Department of Aerospace Engineering",
+      "desc": "Flight, propulsion and structures, from first principles to test.",
+      "href": "https://www.srmist.edu.in/department/department-of-aerospace-engineering"
+    },
+    {
+      "n": "04",
+      "t": "Electronics & Communication",
+      "dept": "ECE · EEE · E&I · Networking",
+      "desc": "From circuit boards to communication systems, built on real hardware.",
+      "href": "https://www.srmist.edu.in/department/department-of-electronics-communication"
+    },
+    {
+      "n": "05",
+      "t": "Civil Engineering",
+      "dept": "Department of Civil Engineering",
+      "desc": "Structures, materials and the built environment around us.",
+      "href": "https://www.srmist.edu.in/department/department-of-civil-engineering/"
+    },
+    {
+      "n": "06",
+      "t": "Biomedical & Biotechnology",
+      "dept": "Biomedical · Biotechnology · Genetic Engineering",
+      "desc": "Engineering for health, from devices to biological systems.",
+      "href": "https://www.srmist.edu.in/department/department-of-biomedical-engineering"
+    }
+  ],
+  "centres": [
+    {
+      "n": "01",
+      "t": "Electric Mobility",
+      "d": "Research and prototyping for the next generation of electric vehicles.",
+      "href": "https://www.srmist.edu.in/department/centre-for-electric-mobility/",
+      "fig": "Drivetrain schematic",
+      "diagram": "drivetrain"
+    },
+    {
+      "n": "02",
+      "t": "Immersive Technologies",
+      "d": "AR, VR and simulation labs for learning, design and research.",
+      "href": "https://www.srmist.edu.in/department/centre-for-immersive-technologies/",
+      "fig": "Headset wireframe",
+      "diagram": "headset"
+    },
+    {
+      "n": "03",
+      "t": "Additive Manufacturing",
+      "d": "From digital model to printed part, with industrial-grade tools.",
+      "href": "https://www.srmist.edu.in/department/department-of-mechanical-engineering/centre-of-excellence-in-additive-manufacturing-ceam/",
+      "fig": "Layer deposition",
+      "diagram": "layers"
+    },
+    {
+      "n": "04",
+      "t": "Automation: SRM BRIN",
+      "d": "A centre of excellence for robotics and automation technologies.",
+      "href": "https://www.srmist.edu.in/department/srm-brin-centre-centre-of-excellence-in-automation-technologies/",
+      "fig": "Articulated arm",
+      "diagram": "arm"
+    },
+    {
+      "n": "05",
+      "t": "Nanotechnology Research Center",
+      "d": "Materials and devices studied at the scale of atoms and molecules.",
+      "href": "https://www.srmist.edu.in/research/research-wings/nrc/",
+      "fig": "Lattice structure",
+      "diagram": "lattice"
+    },
+    {
+      "n": "06",
+      "t": "Composites & Advanced Materials",
+      "d": "Engineered materials that are lighter, stronger and tougher.",
+      "href": "https://www.srmist.edu.in/department/centre-for-composites-and-advanced-materials/",
+      "fig": "Fibre layup",
+      "diagram": "layup"
+    }
+  ],
+  "departments": [
+    {
+      "t": "Aerospace Engineering",
+      "href": "https://www.srmist.edu.in/department/department-of-aerospace-engineering"
+    },
+    {
+      "t": "School of Architecture and Interior Design",
+      "href": "https://www.srmist.edu.in/department/department-of-architecture"
+    },
+    {
+      "t": "Automobile Engineering",
+      "href": "https://www.srmist.edu.in/department/department-of-automobile-engineering"
+    },
+    {
+      "t": "Biomedical Engineering",
+      "href": "https://www.srmist.edu.in/department/department-of-biomedical-engineering"
+    },
+    {
+      "t": "Biotechnology",
+      "href": "https://www.srmist.edu.in/department/department-of-biotechnology"
+    },
+    {
+      "t": "Civil Engineering",
+      "href": "https://www.srmist.edu.in/department/department-of-civil-engineering/"
+    },
+    {
+      "t": "Chemical Engineering",
+      "href": "https://www.srmist.edu.in/department/department-of-chemical-engineering"
+    },
+    {
+      "t": "Chemistry",
+      "href": "https://www.srmist.edu.in/department/department-of-chemistry"
+    },
+    {
+      "t": "Computational Intelligence",
+      "href": "https://www.srmist.edu.in/department/department-of-computational-intelligence"
+    },
+    {
+      "t": "Computing Technologies",
+      "href": "https://www.srmist.edu.in/department/department-of-computing-technologies"
+    },
+    {
+      "t": "Data Science & Business Systems",
+      "href": "https://www.srmist.edu.in/department/department-of-data-science-and-business-systems"
+    },
+    {
+      "t": "Electronics & Communication Engineering",
+      "href": "https://www.srmist.edu.in/department/department-of-electronics-communication"
+    },
+    {
+      "t": "Electrical & Electronics Engineering",
+      "href": "https://www.srmist.edu.in/department/department-of-electrical-and-electronics-engineering"
+    },
+    {
+      "t": "Electronics & Instrumentation Engineering",
+      "href": "https://www.srmist.edu.in/department/department-of-electronics-instrumentation"
+    },
+    {
+      "t": "Food Technology",
+      "href": "https://www.srmist.edu.in/department/department-of-food-technology/"
+    },
+    {
+      "t": "Genetic Engineering",
+      "href": "https://www.srmist.edu.in/department/department-of-genetic-engineering"
+    },
+    {
+      "t": "Language, Culture & Society",
+      "href": "https://www.srmist.edu.in/department/department-of-language-culture-and-society/"
+    },
+    {
+      "t": "Mathematics",
+      "href": "https://www.srmist.edu.in/department/department-of-mathematics/"
+    },
+    {
+      "t": "Mechanical Engineering",
+      "href": "https://www.srmist.edu.in/department/department-of-mechanical-engineering"
+    },
+    {
+      "t": "Mechatronics Engineering",
+      "href": "https://www.srmist.edu.in/department/department-of-mechatronics"
+    },
+    {
+      "t": "Networking & Communications",
+      "href": "https://www.srmist.edu.in/department/department-of-networking-and-communications"
+    },
+    {
+      "t": "Physics and Nanotechnology",
+      "href": "https://www.srmist.edu.in/department/department-of-physics-and-nanotechnology"
+    }
+  ],
+  "centresList": [
+    {
+      "t": "Center for Architectural Heritage",
+      "href": "https://www.srmist.edu.in/department/center-for-architectural-heritage/"
+    },
+    {
+      "t": "Career Development Center",
+      "href": "https://www.srmist.edu.in/department/cet-cdc"
+    },
+    {
+      "t": "SRM-DBT Platform (under Bio Engineering)",
+      "href": "https://www.srmist.edu.in/department/srm-dbt-platform/"
+    },
+    {
+      "t": "Centre for Advanced Concrete Research (CACR)",
+      "href": "https://www.srmist.edu.in/research/research-wings/cacr/"
+    },
+    {
+      "t": "Nanotechnology Research Center",
+      "href": "https://www.srmist.edu.in/research/research-wings/nrc/"
+    },
+    {
+      "t": "Centre for Yoga",
+      "href": "https://www.srmist.edu.in/department/centre-for-yoga/"
+    },
+    {
+      "t": "Centre for Composites and Advanced Materials",
+      "href": "https://www.srmist.edu.in/department/centre-for-composites-and-advanced-materials/"
+    },
+    {
+      "t": "SRM BRIN: Centre of Excellence in Automation Technologies",
+      "href": "https://www.srmist.edu.in/department/srm-brin-centre-centre-of-excellence-in-automation-technologies/"
+    },
+    {
+      "t": "Center for Immersive Technologies",
+      "href": "https://www.srmist.edu.in/department/centre-for-immersive-technologies/"
+    },
+    {
+      "t": "TROPIC: Centre for Atmospheric Sciences and Climate Studies",
+      "href": "https://www.srmist.edu.in/department/department-of-physics-and-nanotechnology/tropic/"
+    },
+    {
+      "t": "Center for Electronics and Skill Development and Consultancy Services",
+      "href": "https://www.srmist.edu.in/department/cesd/"
+    },
+    {
+      "t": "Center of Excellence for Electronic Cooling and CFD Simulation",
+      "href": "https://www.srmist.edu.in/department/center-of-excellence-for-electronic-cooling-and-cfd-simulation/"
+    },
+    {
+      "t": "Centre for Electric Mobility",
+      "href": "https://www.srmist.edu.in/department/centre-for-electric-mobility/"
+    },
+    {
+      "t": "Center of Excellence in Materials for Advanced Technologies (CeMAT)",
+      "href": "https://www.srmist.edu.in/department/center-of-excellence-in-materials-for-advanced-technologies-cemat/"
+    },
+    {
+      "t": "Dr. T. R. Paarivendhar Multidisciplinary Research Centre",
+      "href": "https://www.srmist.edu.in/department/dr-t-r-paarivendhar-multidisciplinary-research-centre/"
+    },
+    {
+      "t": "Centre for Analysis of Movement, Ergonomics Research and Animersion",
+      "href": "https://www.srmist.edu.in/department/centre-for-analysis-of-movement-ergonomics-research-and-animersion/"
+    },
+    {
+      "t": "Centre for Advanced Computational and Theoretical Sciences",
+      "href": "https://www.srmist.edu.in/department/department-of-chemistry/centre-for-advanced-computational-and-theoretical-sciences-acts/"
+    },
+    {
+      "t": "Centre of Excellence in Additive Manufacturing",
+      "href": "https://www.srmist.edu.in/department/department-of-mechanical-engineering/centre-of-excellence-in-additive-manufacturing-ceam/"
+    }
+  ],
+  "likes": {
+    "I like building": [
+      "Civil Engineering",
+      "School of Architecture and Interior Design",
+      "Mechanical Engineering",
+      "Aerospace Engineering",
+      "Automobile Engineering"
+    ],
+    "I like coding": [
+      "Computing Technologies",
+      "Computational Intelligence",
+      "Data Science & Business Systems",
+      "Networking & Communications"
+    ],
+    "I like solving climate problems": [
+      "Chemical Engineering",
+      "Civil Engineering",
+      "Physics and Nanotechnology",
+      "Food Technology"
+    ],
+    "I like machines": [
+      "Mechanical Engineering",
+      "Mechatronics Engineering",
+      "Automobile Engineering",
+      "Electrical & Electronics Engineering",
+      "Aerospace Engineering"
+    ],
+    "I like health tech": [
+      "Biomedical Engineering",
+      "Biotechnology",
+      "Genetic Engineering"
+    ]
+  },
+  "dean": {
+    "name": "Dr. Leenus Jesu Martin M",
+    "role": "Dean, Faculty of Engineering & Technology, Kattankulathur",
+    "email": "dean.cet@srmist.edu.in",
+    "quote": "We believe in empowering our students to take on global challenges and contribute meaningfully to society.",
+    "body": [
+      "Welcome to the College of Engineering & Technology at SRMIST. We are committed to academic excellence, research innovation, and holistic student development. Our college stands at the forefront of engineering education, equipping students with the skills and knowledge necessary to thrive in an ever-evolving technological landscape.",
+      "With world-class faculty, cutting-edge research facilities, and strong industry collaborations, we ensure that our students are prepared not only for successful careers but also to become leaders and innovators in their respective fields. Our curriculum blends theoretical rigor with hands-on experience, emphasizing experiential learning, interdisciplinary projects, and entrepreneurial thinking. Beyond academics, we nurture a vibrant campus culture that fosters creativity, critical thinking, and ethical leadership.",
+      "I invite you to explore the numerous opportunities that our college offers and join us in our mission to shape the future through education and research."
+    ]
+  },
+  "careers": {
+    "intro": "The Career Center makes SRM a favoured recruiting destination for national and international organisations, with infrastructure for pre-placement talks, written tests, group discussions and interviews.",
+    "stats": [
+      {
+        "value": "5,546+",
+        "label": "Job offers",
+        "note": "2023-24 · university-wide"
+      },
+      {
+        "value": "52 LPA",
+        "label": "Highest package",
+        "note": "2023-24 · university-wide"
+      },
+      {
+        "value": "980+",
+        "label": "Companies visited",
+        "note": "2023-24 · university-wide"
+      }
+    ],
+    "statsNote": "University-wide figures for the 2023-24 placement season as published by SRMIST.",
+    "volvo": {
+      "t": "SRMIST and Volvo Group partner to set up Volvo's first university-based Vehicle Technology Centre",
+      "href": "https://www.srmist.edu.in/srmist-and-volvo-group-partner-to-set-up-volvo-first-university-based-vehicle-technology-centre/"
+    },
+    "careerDev": [
+      "Continuous institute–industry interaction",
+      "Pre-joining learning initiatives",
+      "Industrial exhibitions, fairs and seminars",
+      "Alumni activities"
+    ],
+    "cdc": "https://www.srmist.edu.in/department/cet-cdc"
+  },
+  "cta": {
+    "eyebrow": "Admissions 2027",
+    "phone": {
+      "t": "+91 70 2645 2645",
+      "href": "tel:+917026452645"
+    },
+    "apply": "https://applications.srmist.edu.in/",
+    "programmes": "https://www.srmist.edu.in/program-finder/",
+    "prospectus": "https://webstor.srmist.edu.in/web_assets/downloads/2025/srmist-university-prospectus-2025-26.pdf"
+  }
+}

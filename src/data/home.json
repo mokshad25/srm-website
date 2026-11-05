@@ -1,0 +1,203 @@
+{
+  "hero": {
+    "eyebrow": "Admissions 2026-27 · Kattankulathur, Chennai",
+    "sub": "52,000+ minds. A world of possibilities. One connected campus."
+  },
+  "personas": [
+    {
+      "id": "school",
+      "t": "School leavers",
+      "sub": "Programmes across disciplines, taught by faculty in working labs.",
+      "programmes": [
+        "b-tech-computer-science-and-engineering",
+        "mbbs",
+        "b-arch",
+        "bba",
+        "b-sc-physics"
+      ]
+    },
+    {
+      "id": "graduate",
+      "t": "Graduates",
+      "sub": "Research, innovation, internships and global exposure, from Chennai outward.",
+      "programmes": [
+        "m-tech-data-science",
+        "mba",
+        "m-sc-biotechnology",
+        "m-arch"
+      ]
+    },
+    {
+      "id": "researcher",
+      "t": "Researchers",
+      "sub": "Central laboratories, research groups and an innovation hub.",
+      "programmes": [
+        "ph-d",
+        "m-tech-data-science",
+        "m-sc-biotechnology"
+      ]
+    },
+    {
+      "id": "parent",
+      "t": "Parents",
+      "sub": "Placements, alumni and entrepreneurship: 5,546+ job offers in 2023-24.",
+      "programmes": [
+        "b-tech-computer-science-and-engineering",
+        "mbbs",
+        "bba"
+      ]
+    }
+  ],
+  "trust": [
+    {
+      "value": "A++",
+      "label": "NAAC",
+      "note": "Accreditation grade"
+    },
+    {
+      "value": "#12",
+      "label": "NIRF rank",
+      "note": "2024"
+    },
+    {
+      "value": "5,546+",
+      "label": "Job offers",
+      "note": "Batch 2023-24"
+    },
+    {
+      "value": "52 LPA",
+      "label": "Highest package",
+      "note": "Batch 2023-24"
+    },
+    {
+      "value": "980+",
+      "label": "Companies visited",
+      "note": "Placement season 2023-24"
+    }
+  ],
+  "life": [
+    {
+      "t": "Hostels",
+      "slot": "home.life-hostels"
+    },
+    {
+      "t": "Sports",
+      "slot": "home.life-sports"
+    },
+    {
+      "t": "Student clubs",
+      "slot": "home.life-clubs"
+    },
+    {
+      "t": "Cultural festivals",
+      "slot": "home.life-festivals"
+    },
+    {
+      "t": "Food and dining",
+      "slot": "home.life-dining"
+    },
+    {
+      "t": "Central library",
+      "slot": "home.life-library"
+    },
+    {
+      "t": "Student communities",
+      "slot": "home.life-communities"
+    }
+  ],
+  "research": {
+    "intro": "Research across the institution is organised through Centres of Excellence and shared through MedXplore, which brings together research stories from across SRM.",
+    "stats": [
+      {
+        "value": "25,000+",
+        "label": "Publications",
+        "note": "SRM institution-wide"
+      },
+      {
+        "value": "₹300+ Cr",
+        "label": "Research funding",
+        "note": "SRM institution-wide"
+      },
+      {
+        "value": "100+",
+        "label": "Patents",
+        "note": "SRM institution-wide"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Admissions 2026-27",
+    "prospectus": "https://webstor.srmist.edu.in/web_assets/downloads/2025/srmist-university-prospectus-2025-26.pdf",
+    "tour": "https://webstor.srmist.edu.in/web_assets/srmist-virtual-tour-vo/index.htm",
+    "steps": [
+      {
+        "n": "01",
+        "t": "Choose",
+        "d": "Pick a programme and check eligibility."
+      },
+      {
+        "n": "02",
+        "t": "Register",
+        "d": "Create your application."
+      },
+      {
+        "n": "03",
+        "t": "Qualify",
+        "d": "Entrance score or merit as required."
+      },
+      {
+        "n": "04",
+        "t": "Confirm",
+        "d": "Counselling, fees and scholarship."
+      },
+      {
+        "n": "05",
+        "t": "Arrive",
+        "d": "Hostel, orientation and first day."
+      }
+    ],
+    "note": "Indicative steps. Dates, forms and entrance requirements are on the official admissions page."
+  },
+  "discover": {
+    "label": "Academic worlds",
+    "intro": "Keep scrolling. Six faculties, six ways in.",
+    "worlds": [
+      {
+        "n": "01",
+        "t": "Engineering and Technology",
+        "d": "Undergraduate to doctoral programmes taught beside working labs.",
+        "to": "/engineering"
+      },
+      {
+        "n": "02",
+        "t": "Medicine and Health Sciences",
+        "d": "Clinical training and health-science programmes.",
+        "to": "/medicine"
+      },
+      {
+        "n": "03",
+        "t": "Management",
+        "d": "Business and management programmes at undergraduate and postgraduate level.",
+        "to": "https://www.srmist.edu.in/college/college-of-management/"
+      },
+      {
+        "n": "04",
+        "t": "Science and Humanities",
+        "d": "Pure and applied sciences alongside the humanities.",
+        "to": "https://www.srmist.edu.in/college/college-of-science-and-humanities/"
+      },
+      {
+        "n": "05",
+        "t": "Architecture and Design",
+        "d": "Studio-led programmes in a campus full of buildings to learn from.",
+        "to": "https://www.srmist.edu.in/department/department-of-architecture"
+      },
+      {
+        "n": "06",
+        "t": "Research and Innovation",
+        "d": "Central laboratories, research groups and an innovation hub.",
+        "to": "https://www.srmist.edu.in/research/"
+      }
+    ]
+  }
+}

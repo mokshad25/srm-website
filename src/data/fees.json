@@ -1,0 +1,53 @@
+{
+  "label": "Tuition and hostel are from SRM's published pages. Scholarship percentages are illustrative figures.",
+  "tuition": {
+    "b-tech-computer-science-and-engineering": 475000,
+    "b-arch": 275000,
+    "bba": 200000,
+    "b-sc-physics": 75000,
+    "m-tech-data-science": 190000,
+    "mba": 620000,
+    "m-sc-biotechnology": 175000,
+    "m-arch": 100000,
+    "ph-d": 45000
+  },
+  "scholarships": [
+    {
+      "t": "No scholarship",
+      "pct": 0
+    },
+    {
+      "t": "Entrance rank up to 500",
+      "pct": 100
+    },
+    {
+      "t": "Entrance rank up to 2,000",
+      "pct": 50
+    },
+    {
+      "t": "Sports achievement",
+      "pct": 25
+    },
+    {
+      "t": "Merit",
+      "pct": 10
+    }
+  ],
+  "hostels": [
+    {
+      "t": "No hostel",
+      "amount": 0
+    },
+    {
+      "t": "Non-AC, 4 to 5 sharing, with mess",
+      "amount": 118000
+    },
+    {
+      "t": "AC, 2 sharing, with mess",
+      "amount": 273000
+    }
+  ],
+  "unpublished": {
+    "mbbs": "See the NEET MBBS admissions bulletin"
+  }
+}
