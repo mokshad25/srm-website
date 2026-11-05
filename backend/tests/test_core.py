@@ -643,3 +643,19 @@ def test_local_embeddings_need_no_api_key_and_check_length(monkeypatch):
     monkeypatch.setattr(embeddings, "get_settings", lambda: wrong)
     with pytest.raises(RuntimeError, match="Unexpected embedding length"):
         embeddings.embed_text("hostels")
+
+
+@pytest.mark.parametrize(
+    ("answer", "expected"),
+    [
+        ('Hostels ["S2"].', "Hostels [S2]."),
+        ("Hostels [S1, S3].", "Hostels [S1][S3]."),
+        ("""Hostels ['S1', "S2"].""", "Hostels [S1][S2]."),
+        ("Hostels [S1].", "Hostels [S1]."),
+        ("See [note] and [2026].", "See [note] and [2026]."),
+    ],
+)
+def test_citation_variants_are_normalized(answer, expected):
+    from app.services.rag import _normalize_citations
+
+    assert _normalize_citations(answer) == expected

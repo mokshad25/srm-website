@@ -18,6 +18,15 @@ UNVERIFIED_ANSWER = (
 OUT_OF_SCOPE_ANSWER = "I can help with SRMIST Kattankulathur academics, admissions, and campus information."
 
 
+def _normalize_citations(answer: str) -> str:
+    """Rewrite variants such as ["S1"] or [S1, S2] as the [S1][S2] form the API promises."""
+    return re.sub(
+        r"""\[((?:\s*["']?S\d+["']?\s*,?)+)\]""",
+        lambda match: "".join(f"[{source_id}]" for source_id in re.findall(r"S\d+", match.group(1))),
+        answer,
+    )
+
+
 def _official_document(document: Document) -> bool:
     parsed = urlparse(document.source_url)
     if parsed.scheme != "https" or not parsed.hostname:
@@ -160,7 +169,7 @@ def answer_question(db: Session, request: ChatRequest) -> ChatResponse:
     else:
         status = "answered"
 
-    answer_text = generated.answer
+    answer_text = _normalize_citations(generated.answer)
     allowed_citations = set(citation_ids)
     answer_text = re.sub(
         r"\[(S\d+)\]",
