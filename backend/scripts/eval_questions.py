@@ -1,0 +1,45 @@
+"""POST the seed questions to a running API and print each status.
+
+Usage: python scripts/eval_questions.py [limit]
+Paced below the default limit of 30 requests a minute. Each question gets its
+own session, so earlier answers don't influence later ones.
+"""
+import json
+import os
+import sys
+import time
+from collections import Counter
+from pathlib import Path
+
+import requests
+
+API_BASE = os.environ.get("API_BASE", "http://127.0.0.1:8000")
+DATASET = Path(__file__).resolve().parent.parent / "tests" / "question_dataset.json"
+PAUSE_SECONDS = 2.5
+
+
+def main() -> None:
+    questions = json.loads(DATASET.read_text(encoding="utf-8"))
+    if len(sys.argv) > 1:
+        questions = questions[: int(sys.argv[1])]
+    counts: Counter[str] = Counter()
+    for item in questions:
+        response = requests.post(
+            f"{API_BASE}/api/chat",
+            json={"question": item["question"], "campus": "Kattankulathur"},
+            timeout=90,
+        )
+        if response.ok:
+            body = response.json()
+            status, sources = body["status"], len(body["sources"])
+        else:
+            status, sources = f"http_{response.status_code}", 0
+        counts[status] += 1
+        print(f"{status:<22}{sources:>2} sources  {item['question']}", flush=True)
+        time.sleep(PAUSE_SECONDS)
+    print()
+    print(dict(counts))
+
+
+if __name__ == "__main__":
+    main()
