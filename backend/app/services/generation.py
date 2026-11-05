@@ -59,8 +59,8 @@ def generate_answer(
     history: list[tuple[str, str]],
 ) -> GeneratedAnswer:
     settings = get_settings()
-    if not settings.openai_api_key:
-        raise RuntimeError("OPENAI_API_KEY is required for answer generation.")
+    if not settings.llm_api_key:
+        raise RuntimeError(f"{settings.llm_provider.upper()}_API_KEY is required for answer generation.")
     history_limit = max(0, settings.conversation_history_limit)
     history = history[-history_limit:] if history_limit else []
     context: list[str] = []
@@ -86,14 +86,15 @@ def generate_answer(
     )
     try:
         response = OpenAI(
-            api_key=settings.openai_api_key,
+            api_key=settings.llm_api_key,
+            base_url=settings.llm_base_url,
             timeout=settings.openai_timeout_seconds,
         ).responses.create(
             model=settings.openai_model,
             instructions=SYSTEM_PROMPT,
             input=prompt,
             text={"format": {"type": "json_object"}},
-            max_output_tokens=900,
+            max_output_tokens=settings.answer_max_output_tokens,
         )
     except APIError as exc:
         raise RuntimeError("The answer provider request failed.") from exc

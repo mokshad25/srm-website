@@ -470,7 +470,7 @@ def test_generation_parses_mocked_provider_response(monkeypatch):
             return type("Response", (), {"output_text": payload})()
 
     client = type("Client", (), {"responses": Responses()})()
-    settings = generation.get_settings().model_copy(update={"openai_api_key": "test-key", "conversation_history_limit": 2})
+    settings = generation.get_settings().model_copy(update={"llm_provider": "openai", "openai_api_key": "test-key", "conversation_history_limit": 2})
     monkeypatch.setattr(generation, "OpenAI", lambda **_kwargs: client)
     monkeypatch.setattr(generation, "get_settings", lambda: settings)
     document = Document(
@@ -498,7 +498,7 @@ def test_generation_translates_provider_errors(monkeypatch):
             raise APIConnectionError(request=httpx.Request("POST", "https://api.openai.com/v1/responses"))
 
     client = type("Client", (), {"responses": Responses()})()
-    settings = generation.get_settings().model_copy(update={"openai_api_key": "test-key"})
+    settings = generation.get_settings().model_copy(update={"llm_provider": "openai", "openai_api_key": "test-key"})
     monkeypatch.setattr(generation, "OpenAI", lambda **_kwargs: client)
     monkeypatch.setattr(generation, "get_settings", lambda: settings)
     document = Document(
@@ -550,7 +550,7 @@ def test_embedding_failure_is_explicit(monkeypatch):
     from app.config import get_settings
     import app.services.embeddings as embeddings
 
-    monkeypatch.setattr(embeddings, "get_settings", lambda: get_settings().model_copy(update={"openai_api_key": None}))
+    monkeypatch.setattr(embeddings, "get_settings", lambda: get_settings().model_copy(update={"embedding_provider": "openai", "openai_api_key": None}))
     with pytest.raises(RuntimeError, match="OPENAI_API_KEY"):
         embeddings.embed_text("test")
 
@@ -598,3 +598,48 @@ def test_unrelated_questions_stay_out_of_scope(question):
     from app.services.query_understanding import understand_query
 
     assert not understand_query(question, []).in_scope
+
+
+def test_groq_provider_uses_its_own_key_and_base_url():
+    from app.config import GROQ_BASE_URL, get_settings
+
+    settings = get_settings().model_copy(update={"llm_provider": "groq", "groq_api_key": "g", "openai_api_key": "o"})
+    assert settings.llm_api_key == "g"
+    assert settings.llm_base_url == GROQ_BASE_URL
+
+
+def test_openai_provider_keeps_the_default_endpoint():
+    from app.config import get_settings
+
+    settings = get_settings().model_copy(update={"llm_provider": "openai", "groq_api_key": "g", "openai_api_key": "o"})
+    assert settings.llm_api_key == "o"
+    assert settings.llm_base_url is None
+
+
+def test_answer_generation_names_the_missing_provider_key(monkeypatch):
+    from app.services import generation
+
+    settings = generation.get_settings().model_copy(update={"llm_provider": "groq", "groq_api_key": None})
+    monkeypatch.setattr(generation, "get_settings", lambda: settings)
+    with pytest.raises(RuntimeError, match="GROQ_API_KEY"):
+        generation.generate_answer("hostels", [], [])
+
+
+def test_local_embeddings_need_no_api_key_and_check_length(monkeypatch):
+    from app.services import embeddings
+
+    class FakeModel:
+        def embed(self, texts):
+            return iter([__import__("numpy").array([0.1, 0.2, 0.3]) for _ in texts])
+
+    settings = embeddings.get_settings().model_copy(
+        update={"embedding_provider": "local", "embedding_dimensions": 3, "openai_api_key": None}
+    )
+    monkeypatch.setattr(embeddings, "get_settings", lambda: settings)
+    monkeypatch.setattr(embeddings, "_local_model", lambda *_args: FakeModel())
+    assert embeddings.embed_text("hostels") == pytest.approx([0.1, 0.2, 0.3])
+
+    wrong = settings.model_copy(update={"embedding_dimensions": 4})
+    monkeypatch.setattr(embeddings, "get_settings", lambda: wrong)
+    with pytest.raises(RuntimeError, match="Unexpected embedding length"):
+        embeddings.embed_text("hostels")

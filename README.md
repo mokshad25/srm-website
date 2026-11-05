@@ -43,6 +43,12 @@ See [`backend/.env.example`](backend/.env.example). Important values:
 
 Use HTTPS in production and never expose backend secrets to a browser. The current rate limiter is process-local; multi-instance deployments need an upstream/shared limiter. The admin key is shared bearer authentication and should be rotated and restricted to trusted operators.
 
+### Groq with local embeddings
+
+The default is OpenAI for both answers and embeddings. To use Groq for answers and `fastembed` for embeddings, with no OpenAI key, set `LLM_PROVIDER=groq`, `GROQ_API_KEY`, `OPENAI_MODEL=openai/gpt-oss-120b`, `EMBEDDING_PROVIDER=local`, `EMBEDDING_MODEL=BAAI/bge-small-en-v1.5` and `EMBEDDING_DIMENSIONS=384`. The model downloads on first use.
+
+Vectors from different embedding models can't be compared. After changing the embedding model or dimensions, re-ingest every document, and on PostgreSQL recreate the schema so the vector column matches.
+
 ## Ingesting public knowledge
 
 Index only permitted, verified official SRMIST sources. Admin URL ingestion checks approved domains and robots.txt, blocks redirects, enforces download limits, and skips unchanged content by hash.
