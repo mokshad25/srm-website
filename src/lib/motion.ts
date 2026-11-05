@@ -19,8 +19,8 @@ export function useSmoothScroll() {
     lenis = l;
     l.on('scroll', ScrollTrigger.update);
     const tick = (t: number) => {
-      // The Ask panel and the phone menu lock the page; follow them.
-      const locked = document.documentElement.style.overflow === 'hidden' || !!document.querySelector('.ask-drawer[open]');
+      // The chat, the emergency sheet and the phone menu lock the page; follow them.
+      const locked = document.documentElement.style.overflow === 'hidden' || !!document.querySelector('[data-lock-scroll][open]');
       if (locked) l.stop();
       else l.start();
       l.raf(t * 1000);

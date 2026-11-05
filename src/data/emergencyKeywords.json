@@ -1,0 +1,23 @@
+{
+  "_help": "Words and phrases checked before a message reaches the assistant. Matching ignores case and punctuation, and an apostrophe is dropped (write dont, not don't). Each entry matches whole words. End an entry with * to match any ending: ragg* matches ragged and ragging. distress never offers the Ask anyway link. emergency does.",
+  "distress": [
+    "suicide", "suicidal", "kill myself", "killing myself", "end my life", "ending my life", "take my life",
+    "end it all", "ending it all", "want to die", "wanna die", "wish i was dead", "better off dead",
+    "self harm", "harm myself", "hurt myself", "hurting myself", "cut myself", "cutting myself",
+    "dont want to live", "dont want to be alive", "no reason to live", "cant go on", "cannot go on",
+    "aatmahatya", "atmahatya", "khudkushi", "khudkhushi", "marna chahta", "marna chahti", "mar jaunga", "mar jaungi",
+    "jeena nahi chahta", "jeena nahi chahti", "jina nahi chahta", "jina nahi chahti", "zindagi khatam", "jaan de dunga", "jaan de dungi",
+    "tharkolai", "thatkolai", "tarkolai", "saganum", "saga poren", "saga porean", "sethu poganum", "uyir vida poren", "vaazha pidikala", "vazha pidikala",
+    "आत्महत्या", "खुदकुशी", "मरना चाहता", "मरना चाहती", "जीना नहीं चाहता", "जीना नहीं चाहती",
+    "தற்கொலை", "சாக வேண்டும்", "சாகணும்", "வாழ பிடிக்கவில்லை"
+  ],
+  "emergency": [
+    "emergency", "emergencies", "ambulance", "fire", "fires", "smoke", "accident", "accidents", "crash",
+    "bleeding", "unconscious", "fainted", "collapsed", "not breathing", "cant breathe", "choking", "seizure", "heart attack", "snake bite", "poisoned",
+    "harass*", "ragg*", "assault*", "molest*", "stalk*", "rape", "raped", "abused", "feel unsafe", "feeling unsafe", "not safe", "being followed",
+    "aag lagi", "aag lag gayi", "durghatna", "hadsa", "khoon beh", "behosh", "chhedkhani", "chedkhani", "chhed raha", "pareshan kar raha", "bachao", "madad karo",
+    "theepidichu", "thee pidichu", "vibathu", "vipathu", "ratham varuthu", "mayakkam", "kapathunga", "kaappathunga", "thollai", "paathugappu illai",
+    "आग लगी", "दुर्घटना", "हादसा", "बेहोश", "छेड़खानी", "बचाओ", "मदद करो", "रैगिंग",
+    "தீ விபத்து", "விபத்து", "ரத்தம்", "மயக்கம்", "காப்பாத்துங்க", "தொல்லை", "ராகிங்"
+  ]
+}

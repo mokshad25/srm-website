@@ -1,18 +1,20 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import examples from '../../data/askExamples.json';
+import { checkSafety } from '../../lib/safety';
 import AskExamples from './AskExamples';
 import { useAsk } from './AskProvider';
 import { SearchIcon } from './AskTrigger';
 
-/** The single-line question field in the Home hero. Answers open in AskPanel. */
+/** The single-line question field in the Home hero. Answers open in the chat widget. */
 export default function AskBar() {
   const { submit, busy } = useAsk();
   const [value, setValue] = useState('');
 
   const onSubmit = (event: FormEvent) => {
     event.preventDefault();
-    if (!value.trim() || busy) return;
+    // While an answer loads, ordinary text stays in the field. A safety match never waits.
+    if (!value.trim() || (busy && !checkSafety(value))) return;
     submit(value);
     setValue('');
   };

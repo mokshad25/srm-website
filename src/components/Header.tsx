@@ -4,6 +4,7 @@ import seal from '../assets/srm-seal.png';
 import site from '../data/site.json';
 import { useIntroDone } from '../lib/intro';
 import AskTrigger from './ask/AskTrigger';
+import EmergencyButton from './emergency/EmergencyButton';
 
 export const headerKey = (pathname: string) =>
   pathname.startsWith('/engineering') ? 'engineering' : pathname.startsWith('/medicine') ? 'medicine' : 'home';
@@ -50,15 +51,15 @@ export default function Header() {
       data-header={state}
       className={`${light ? 'text-off-white' : 'on-light text-ink'} fixed inset-x-0 top-0 z-40 border-b transition-[color,opacity,background-color,border-color] duration-300 ${!ready ? 'pointer-events-none opacity-0' : ''} ${solid || open ? 'border-ink/15 bg-off-white' : 'border-transparent bg-transparent'}`}
     >
-      <div className="relative z-10 flex items-center justify-between gap-6 px-6 py-3 md:px-14">
+      <div className="relative z-10 flex items-center justify-between gap-3 px-6 py-3 sm:gap-6 md:px-14">
         <Link to="/" tabIndex={off} className="flex min-w-0 items-center gap-3">
           <img src={seal} alt="SRM seal" width={64} height={64} className="h-12 w-12 rounded-full lg:h-14 lg:w-14" />
           <span className="block leading-none">
             <span className="block font-display text-22 font-bold">SRM</span>
-            <span className="block text-14 font-medium">{h.division}</span>
+            <span className="hidden text-14 font-medium sm:block">{h.division}</span>
           </span>
         </Link>
-        <div className="flex shrink-0 items-center gap-3 xl:gap-4 2xl:gap-8">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3 xl:gap-4 2xl:gap-8">
           <nav aria-label="Main" className="hidden items-center gap-5 xl:flex 2xl:gap-8">
             {h.nav.map((n) => (
               <NavLink key={n.t} to={n.to} tabIndex={off} end className="nav-link text-17 font-medium">
@@ -69,6 +70,7 @@ export default function Header() {
               {h.apply.t}
             </a>
           </nav>
+          <EmergencyButton tabIndex={off} />
           <AskTrigger tone={light ? 'dark' : 'light'} tabIndex={off} />
           <button
             ref={toggle}

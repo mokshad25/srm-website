@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import site from '../data/site.json';
+import EmergencyButton from './emergency/EmergencyButton';
 import { headerKey } from './Header';
 
 const SIZES = [100, 112.5, 125];
@@ -22,8 +23,9 @@ function Utility() {
           <li key={u.t}>{u.href ? <a href={u.href} className="hover:underline">{u.t}</a> : u.t}</li>
         ))}
       </ul>
-      <div className="flex items-center gap-2">
-        <span>Text size</span>
+      <div className="flex flex-wrap items-center gap-2">
+        <EmergencyButton />
+        <span className="ml-2">Text size</span>
         <button type="button" className={btn} aria-label="Increase text size" onClick={() => apply(size + 1)}>A+</button>
         <button type="button" className={btn} aria-label="Decrease text size" onClick={() => apply(size - 1)}>A−</button>
         <button type="button" className={btn} aria-label="Reset text size" onClick={() => apply(0)}>Reset</button>

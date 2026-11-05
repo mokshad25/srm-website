@@ -18,6 +18,7 @@
     --color-srm-blue: theme(colors.srm-blue);
     --color-amber: theme(colors.amber);
     --color-teal: theme(colors.teal);
+    --color-danger: theme(colors.danger);
     --color-royal: theme(colors.royal);
   }
   html {
@@ -90,16 +91,65 @@
   }
 }
 
-html:has(.ask-drawer[open]) {
+html:has([data-lock-scroll][open]) {
   overflow: hidden;
 }
-.ask-drawer[open] {
-  animation: ask-in 0.24s ease-out;
+.support-panel[open] {
+  animation: panel-in 0.25s ease-out;
 }
-@keyframes ask-in {
+.support-panel[data-closing] {
+  animation: panel-out 0.25s ease-in forwards;
+}
+@keyframes panel-in {
   from {
     opacity: 0;
-    transform: translateX(32px);
+    transform: translateY(100%);
+  }
+}
+@keyframes panel-out {
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+@media (min-width: 40rem) {
+  @keyframes panel-in {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+  }
+  @keyframes panel-out {
+    to {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+  }
+}
+.chat-in {
+  animation: chat-in 0.22s ease-out both;
+}
+@keyframes chat-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+.typing-dot {
+  animation: typing 1s ease-in-out infinite alternate;
+}
+@keyframes typing {
+  to {
+    opacity: 0.25;
+  }
+}
+.emergency-sheet[open] {
+  animation: sheet-in 0.2s ease-out;
+}
+@keyframes sheet-in {
+  from {
+    opacity: 0;
+    margin-top: 16px;
   }
 }
 @keyframes ken-burns {
