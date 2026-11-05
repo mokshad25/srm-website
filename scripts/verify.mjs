@@ -5,7 +5,7 @@ import { chromium } from 'playwright';
 
 const PORT = 4174;
 const BASE = `http://localhost:${PORT}`;
-const ROUTES = ['/', '/engineering', '/medicine', '/learn-leap-lead'];
+const ROUTES = ['/', '/engineering', '/medicine', '/learn-leap-lead', '/campus-explorer'];
 const BANNED = ['sample', 'placeholder', 'to be supplied', '[', 'todo', 'lorem'];
 const SCALE = [12, 14, 17, 22, 32, 52, 84];
 
@@ -15,8 +15,13 @@ const check = (name, ok, detail = '') => {
   (ok ? pass : failures).push(detail ? `${name}: ${detail}` : name);
 };
 
-const server = spawn('npx', ['vite', 'preview', '--port', String(PORT), '--strictPort'], { stdio: 'ignore', detached: true });
-const stop = () => { try { process.kill(-server.pid); } catch { /* gone */ } };
+const server = spawn(process.execPath, ['node_modules/vite/bin/vite.js', 'preview', '--port', String(PORT), '--strictPort'], { stdio: 'ignore', detached: process.platform !== 'win32' });
+const stop = () => {
+  try {
+    if (process.platform === 'win32') server.kill();
+    else process.kill(-server.pid);
+  } catch { /* gone */ }
+};
 
 const settle = (page) =>
   page.evaluate(async () => {
@@ -125,6 +130,8 @@ try {
   const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
   const page = await ctx.newPage();
   await page.goto(BASE + '/', { waitUntil: 'networkidle' });
+  check('homepage cinematic campus section', (await page.locator('#campus').count()) === 1);
+  check('campus CTA points to explorer', await page.getByRole('link', { name: /Explore Our Campus/ }).getAttribute('href') === '/campus-explorer');
   const photosData = JSON.parse(readFileSync('src/data/photos.json', 'utf8'));
   const unsourced = photosData.photos.filter((p) => p.source === 'stock' && !(p.url && p.licence));
   check('every stock photo has a source and licence', unsourced.length === 0, unsourced.map((p) => p.id).join(', '));
@@ -170,13 +177,14 @@ try {
 
   // 7. Campus map
   const nearCampus = async (p) => {
-    await p.evaluate(() => document.getElementById('campus').scrollIntoView());
+    await p.goto(BASE + '/campus-explorer', { waitUntil: 'networkidle' });
+    await p.locator('.campus-scene').scrollIntoViewIfNeeded();
     await p.waitForSelector('[data-marker=food]', { timeout: 15000 });
   };
   await nearCampus(page);
   check('map has 24 places', (await page.locator('[data-marker]').count()) === 24);
-  check('map is SVG, not WebGL', (await page.locator('#campus canvas').count()) === 0);
-  check('map marked illustrative', (await page.locator('#campus').innerText()).includes('Illustrative map'));
+  check('map is SVG, not WebGL', (await page.locator('.campus-scene canvas').count()) === 0);
+  check('map marked illustrative', (await page.locator('.campus-scene').innerText()).includes('Illustrative map'));
   await page.locator('[data-marker=lib]').click();
   await page.getByLabel('Jump to a place').selectOption('food');
   await page.waitForTimeout(600); // The previous card slides out.
@@ -213,6 +221,8 @@ try {
   await nearCampus(page);
   check('explored count survives reload', (await page.locator('[data-explored-count]').innerText()).replace(/\s+/g, ' ').startsWith('2 of'));
   await page.getByRole('button', { name: 'Reset progress' }).click();
+  await page.goto(BASE + '/', { waitUntil: 'networkidle' });
+  await settle(page);
 
   // Real content blocks.
   check('recruiter marquee shows real names', (await page.locator('#recruiters').innerText()).includes('Infosys'));
