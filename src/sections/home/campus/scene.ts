@@ -4,6 +4,12 @@ import { drawBuilding, palette as C } from './buildings';
 import { col, Pen, type Op } from './pen';
 
 export const places = campus.places;
+
+/** The directory's groups. Each lists existing `cat` values, so places stay in one list. */
+export const directory = campus.directory;
+
+export const inFilter = (cat: string | undefined, filter: string) =>
+  filter === 'all' || cat === filter || !!directory.find((group) => group.id === filter)?.cats.includes(cat ?? '');
 export type Place = (typeof places)[number];
 const s = campus.scene;
 export const WORLD = { W: s.world[0], D: s.world[1] };

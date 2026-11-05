@@ -84,9 +84,9 @@
     "semantic_hash": "c08c88005122f906ad0a1c07a276fae2"
   },
   "src/data/campus.json": {
-    "mtime": 1793917761.7076635,
-    "seen": 1793918619.3152409,
-    "ast_hash": "73b8772435962df812e14777575adb8b",
+    "mtime": 1793920571.8905346,
+    "seen": 1793921831.351209,
+    "ast_hash": "e5af2a0e3ab98265c8de21ba9f0cba95",
     "semantic_hash": ""
   },
   "src/data/engineering.json": {
@@ -204,15 +204,15 @@
     "semantic_hash": ""
   },
   "src/sections/home/Optional.tsx": {
-    "mtime": 1793917761.7146199,
-    "seen": 1793918619.315395,
-    "ast_hash": "64ddaa868eef7d8528162546b2913e59",
+    "mtime": 1793919789.9987247,
+    "seen": 1793920044.743371,
+    "ast_hash": "10c8037e56a894aa8a09c188b6f7531f",
     "semantic_hash": ""
   },
   "src/sections/home/Programmes.tsx": {
-    "mtime": 1793917761.7151916,
-    "seen": 1793918619.315397,
-    "ast_hash": "d7178cbed6f852faaac2ccc20d4fc577",
+    "mtime": 1793919931.5930188,
+    "seen": 1793920044.7433732,
+    "ast_hash": "75ecd75f92c559b9547788d771aa16b7",
     "semantic_hash": ""
   },
   "src/sections/medicine/BodyDiagram.tsx": {
@@ -540,9 +540,9 @@
     "semantic_hash": ""
   },
   "src/sections/home/campus/CampusMap.tsx": {
-    "mtime": 1793917761.7154098,
-    "seen": 1793918619.315398,
-    "ast_hash": "4a1da5c217b62fc42766d641eef52608",
+    "mtime": 1793921719.6070614,
+    "seen": 1793921831.351243,
+    "ast_hash": "c9343f037838607a1e80c5e1f707a7b7",
     "semantic_hash": ""
   },
   "src/sections/home/campus/Life.tsx": {
@@ -564,9 +564,9 @@
     "semantic_hash": ""
   },
   "src/sections/home/campus/scene.ts": {
-    "mtime": 1793917761.716418,
-    "seen": 1793918619.315401,
-    "ast_hash": "ab1a4f33d454e88764af0598a3b82837",
+    "mtime": 1793920571.890901,
+    "seen": 1793921831.351246,
+    "ast_hash": "269aee5a0df144c5d996a8fe92e98aea",
     "semantic_hash": ""
   },
   "backend/alembic/env.py": {
@@ -1137,6 +1137,12 @@
     "mtime": 1793917761.5987728,
     "seen": 1793918619.3155332,
     "ast_hash": "1ad40911441eaa6d6be2ba4612b48bcf",
+    "semantic_hash": ""
+  },
+  "src/sections/home/campus/CampusDirectory.tsx": {
+    "mtime": 1793921490.0616214,
+    "seen": 1793921831.351242,
+    "ast_hash": "00f8b4e973396ea2e223dcc3d23a460c",
     "semantic_hash": ""
   }
 }

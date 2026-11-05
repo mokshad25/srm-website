@@ -198,7 +198,7 @@ export function LiveLearnPlay() {
   if (strips.length < 2) return null;
   return (
     <Section id="life" tone="night" label="Campus life" heading={<>Live. Learn. <em>Play.</em></>}>
-      <div className="flex h-[420px] gap-1 md:h-[560px] md:gap-2">
+      <div className="flex h-[420px] gap-1 max-md:h-auto max-md:flex-col max-md:gap-4 md:h-[560px] md:gap-2">
         {strips.map((s, i) => (
           <button
             key={s.slot}
@@ -209,10 +209,10 @@ export function LiveLearnPlay() {
             onFocus={() => setActive(i)}
             onClick={() => setActive(i)}
             style={{ flexGrow: active === i ? 5 : 1, transition: 'flex-grow 600ms cubic-bezier(0.22, 1, 0.36, 1)' }}
-            className="relative min-w-0 flex-1 overflow-hidden text-left"
+            className="relative min-w-0 flex-1 overflow-hidden text-left max-md:aspect-video max-md:w-full max-md:flex-none max-md:rounded-2xl"
           >
             <Photo slot={s.slot} className="absolute inset-0" />
-            <span className="absolute inset-x-0 bottom-0 bg-ink/80 p-3 text-17 font-bold whitespace-nowrap text-off-white">{s.t}</span>
+            <span className="absolute inset-x-0 bottom-0 bg-ink/80 p-3 text-17 font-bold whitespace-nowrap text-off-white max-md:bg-transparent max-md:bg-gradient-to-t max-md:from-ink/90 max-md:to-transparent max-md:p-4 max-md:pt-12 max-md:text-22 max-md:whitespace-normal">{s.t}</span>
           </button>
         ))}
       </div>

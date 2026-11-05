@@ -82,13 +82,13 @@ function Finder({ highlighted }: { highlighted: string[] }) {
             </button>
           ))}
         </div>
-        <label className="flex items-center gap-3 text-14 font-semibold">
+        <label className="flex items-center gap-3 text-14 font-semibold max-md:w-full">
           Search programmes
           <input
             type="search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            className="border border-ink bg-white px-3 py-1.5 text-17 font-normal"
+            className="border border-ink bg-white px-3 py-1.5 text-17 font-normal max-md:min-w-0 max-md:flex-1"
           />
         </label>
       </div>
