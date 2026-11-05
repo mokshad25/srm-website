@@ -11,7 +11,8 @@ import { project, toPath, type Quarter, type V2 } from '../../../lib/iso';
 import { photoFor } from '../../../lib/photos';
 import Life from './Life';
 import { paletteCss, type Op } from './pen';
-import { buildScene, places, routeTo, type Item, type Scene } from './scene';
+import CampusDirectory from './CampusDirectory';
+import { buildScene, inFilter, places, routeTo, type Item, type Scene } from './scene';
 
 const MIN_Z = 0.8;
 const PLAN_MIN_Z = 0.6; // The flat plan is taller than the frame.
@@ -88,6 +89,18 @@ const Turn = ({ flip }: { flip?: boolean }) => (
   </svg>
 );
 
+const PHONE = 768;
+/** Width the floating directory takes from the frame once it sits beside the map, from 1280 px. */
+const DIRECTORY_FROM = 1280;
+const DIRECTORY_SPACE = 320;
+const directorySpace = () => (window.innerWidth >= DIRECTORY_FROM ? DIRECTORY_SPACE : 0);
+const CARD_SHARE = 0.55;
+const GROUP_MAX_Z = 1.6;
+const GROUP_MARGIN_X = 120;
+const GROUP_MARGIN_Y = 240;
+/** Keeps a row of map controls in the map's share of the frame while the card is open on a phone. */
+const BESIDE_CARD = 'max-md:right-[calc(55%+0.25rem)] max-md:left-1';
+
 const ctl = 'inline-flex min-h-11 min-w-11 items-center justify-center bg-off-white px-3 text-14 font-semibold text-ink transition-colors duration-200 hover:bg-ink hover:text-off-white active:scale-95';
 
 export default function CampusMap() {
@@ -146,6 +159,8 @@ export default function CampusMap() {
 
   /* Camera. Lives outside React state so a pan never re-renders the drawing. */
   const cam = useRef({ x: 0, y: 0, z: 1 });
+  /** Share of the frame the card covers. Only phones reserve any, because the card sits beside the map there. */
+  const covered = useRef(0);
   const idle = useRef(0);
   const stageH = size.w * (vb.h / vb.w);
 
@@ -158,7 +173,9 @@ export default function CampusMap() {
     const fh = f.clientHeight;
     const w = fw * c.z;
     const h = (fw * (vb.h / vb.w)) * c.z;
-    c.x = w <= fw ? (fw - w) / 2 : Math.min(fw * 0.1, Math.max(fw * 0.9 - w, c.x));
+    const left = directorySpace();
+    const free = fw * (1 - covered.current) - left;
+    c.x = w <= free ? left + (free - w) / 2 : Math.min(left + free * 0.1, Math.max(left + free * 0.9 - w, c.x));
     c.y = h <= fh ? (fh - h) / 2 : Math.min(fh * 0.1, Math.max(fh * 0.9 - h, c.y));
     el.style.transform = `translate3d(${c.x}px, ${c.y}px, 0) scale(${c.z})`;
     el.style.setProperty('--z', String(c.z));
@@ -186,12 +203,19 @@ export default function CampusMap() {
   }, [apply, reduce]);
 
   
+  /** Restores what the map is showing after its size or view changes: the selection, a group or the whole campus. */
+  const reframe = useRef<() => void>(() => undefined);
+
   const home0 = useCallback((duration = 0) => {
     const f = frame.current;
     if (!f) return;
     const fit = f.clientHeight / (f.clientWidth * (vb.h / vb.w));
-    const z = window.innerWidth < 768 ? 2 : plan ? Math.max(PLAN_MIN_Z, Math.min(1, fit)) : 1;
-    tween((f.clientWidth - f.clientWidth * z) / 2, (f.clientHeight - f.clientWidth * (vb.h / vb.w) * z) / 2, z, duration);
+    const left = directorySpace();
+    const least = plan ? PLAN_MIN_Z : MIN_Z;
+    const whole = plan ? Math.max(PLAN_MIN_Z, Math.min(1, fit)) : 1;
+    // Beside the directory, the opening view steps back so no marker starts underneath it.
+    const z = window.innerWidth < PHONE ? 2 : left ? Math.max(least, Math.min(whole, (f.clientWidth - left) / f.clientWidth)) : whole;
+    tween(left + (f.clientWidth - left - f.clientWidth * z) / 2, (f.clientHeight - f.clientWidth * (vb.h / vb.w) * z) / 2, z, duration);
   }, [tween, vb, plan]);
 
   useEffect(() => {
@@ -199,7 +223,7 @@ export default function CampusMap() {
     if (!f) return;
     const ro = new ResizeObserver(() => {
       setSize({ w: f.clientWidth, h: f.clientHeight });
-      home0(0);
+      reframe.current();
     });
     ro.observe(f);
     return () => ro.disconnect();
@@ -212,9 +236,10 @@ export default function CampusMap() {
     const fw = f.clientWidth;
     const fh = f.clientHeight;
     const wide = fw >= 900;
-    const free = wide ? fw - 420 : fw;
-    const midY = wide ? fh * 0.55 : fh * 0.32;
-    tween(free / 2 - nx * fw * z, midY - ny * (fw * (vb.h / vb.w)) * z, z, duration);
+    const free = wide ? fw - 420 : fw * (1 - covered.current);
+    const midY = wide ? fh * 0.55 : covered.current ? fh * 0.5 : fh * 0.32;
+    const left = directorySpace();
+    tween((left + free) / 2 - nx * fw * z, midY - ny * (fw * (vb.h / vb.w)) * z, z, duration);
   }, [tween, vb]);
 
   /* Selecting. */
@@ -236,19 +261,57 @@ export default function CampusMap() {
 
   const open = useCallback((id: string) => {
     setSel(id);
+    covered.current = window.innerWidth < PHONE ? CARD_SHARE : 0;
     if (!explored.includes(id)) {
       mark(id);
       const note = MILESTONES[explored.length + 1];
       if (note) toast(note);
     }
     const q = pos[id];
-    if (q) focus(q[0], q[1], Math.max(cam.current.z, window.innerWidth < 768 ? 1.9 : 1.5));
+    if (q) focus(q[0], q[1], Math.max(cam.current.z, window.innerWidth < PHONE ? 1.9 : 1.5));
   }, [explored, focus, mark, pos]);
+
+  /** Frames every place in a directory group or filter, in the part of the map nothing covers. */
+  const frameGroup = useCallback((id: string, duration = 0.8) => {
+    const f = frame.current;
+    if (!f) return;
+    if (id === 'all') return home0(duration);
+    const spots = places.filter((p) => inFilter(p.cat, id) && pos[p.id]).map((p) => pos[p.id]);
+    if (!spots.length) return;
+    const fw = f.clientWidth;
+    const fh = f.clientHeight;
+    const tall = fw * (vb.h / vb.w);
+    const left = directorySpace();
+    const xs = spots.map((q) => q[0]);
+    const ys = spots.map((q) => q[1]);
+    const spanX = (Math.max(...xs) - Math.min(...xs)) * fw;
+    const spanY = (Math.max(...ys) - Math.min(...ys)) * tall;
+    const fit = Math.min((fw - left - GROUP_MARGIN_X) / (spanX + 1), (fh - GROUP_MARGIN_Y) / (spanY + 1));
+    const z = Math.max(plan ? PLAN_MIN_Z : MIN_Z, Math.min(GROUP_MAX_Z, fit));
+    const cx = (Math.min(...xs) + Math.max(...xs)) / 2;
+    const cy = (Math.min(...ys) + Math.max(...ys)) / 2;
+    tween(left + (fw - left) / 2 - cx * fw * z, fh / 2 - cy * tall * z, z, duration);
+  }, [home0, plan, pos, tween, vb]);
+
+  useEffect(() => {
+    reframe.current = () => {
+      if (sel && pos[sel]) focus(pos[sel][0], pos[sel][1], cam.current.z, 0);
+      else frameGroup(filter, 0);
+    };
+  }, [filter, focus, frameGroup, pos, sel]);
 
   const close = useCallback(() => {
     setSel(null);
-    home0(0.7);
-  }, [home0]);
+    covered.current = 0;
+    frameGroup(filter, 0.7);
+  }, [filter, frameGroup]);
+
+  const chooseFilter = useCallback((id: string) => {
+    setSel(null);
+    covered.current = 0;
+    setFilter(id);
+    frameGroup(id);
+  }, [frameGroup]);
 
   const fitRoute = () => {
     drawRoute();
@@ -261,13 +324,14 @@ export default function CampusMap() {
     const f = frame.current!;
     const spanX = (Math.max(...xs) - Math.min(...xs)) * f.clientWidth;
     const spanY = (Math.max(...ys) - Math.min(...ys)) * f.clientWidth * (vb.h / vb.w);
-    const z = Math.max(MIN_Z, Math.min(MAX_Z, Math.min((f.clientWidth - 500) / (spanX + 1), (f.clientHeight - 200) / (spanY + 1))));
+    const room = covered.current ? f.clientWidth * (1 - covered.current) - 24 : f.clientWidth - 500 - directorySpace();
+    const z = Math.max(MIN_Z, Math.min(MAX_Z, Math.min(room / (spanX + 1), (f.clientHeight - 200) / (spanY + 1))));
     focus(cx, cy, z);
   };
 
   /* Dimming: applied directly so 24 groups change without re-rendering 600 nodes. */
   useEffect(() => {
-    const on = (id: string, cat: string) => (sel ? id === sel : filter === 'all' || cat === filter);
+    const on = (id: string, cat: string) => (sel ? id === sel : inFilter(cat, filter));
     svg.current?.querySelectorAll<SVGGElement>('[data-b]').forEach((g) => {
       g.toggleAttribute('data-dim', !on(g.dataset.b!, g.dataset.cat!));
     });
@@ -310,6 +374,7 @@ export default function CampusMap() {
   };
   useEffect(() => {
     if (sel && pos[sel]) focus(pos[sel][0], pos[sel][1], cam.current.z, 0.4);
+    else if (filter !== 'all') frameGroup(filter, 0.4);
     else apply();
     // Re-aim at the selection after the projection changes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -465,6 +530,8 @@ export default function CampusMap() {
         heading={<>Walk it before you <em className="font-serif font-normal">arrive.</em></>}
         intro="Click a marker or a building to open its card, drag to look around, and watch the route draw from Gate 4."
       />
+      <div className="relative">
+      <CampusDirectory filter={filter} selected={sel} onFilter={chooseFilter} onPlace={open} onHover={setHover} />
       <div
         ref={frame}
         tabIndex={0}
@@ -479,7 +546,9 @@ export default function CampusMap() {
         onPointerLeave={() => { setHover(null); setEngaged(false); }}
         onKeyDown={onKey}
         onFocus={(e) => e.target === frame.current && setEngaged(true)}
-        className={`campus-scene on-light relative h-[calc(100svh-96px)] max-h-[820px] min-h-[560px] touch-pan-y overflow-hidden select-none ${onScreen ? '' : 'paused'} cursor-grab active:cursor-grabbing`}
+        // Panning moves the camera. The browser can still scroll this box to reveal a control, which would shift the map.
+        onScroll={(e) => { e.currentTarget.scrollLeft = 0; e.currentTarget.scrollTop = 0; }}
+        className={`campus-scene on-light relative h-[calc(100svh-96px)] max-h-[820px] max-xl:h-[calc(100svh-196px)] md:max-xl:h-[calc(100svh-208px)] min-h-[560px] touch-pan-y overflow-hidden select-none ${onScreen ? '' : 'paused'} cursor-grab active:cursor-grabbing`}
       >
         <style>{palette}</style>
         <div ref={stage} style={{ width: size.w, height: stageH, transformOrigin: '0 0' }} className="absolute top-0 left-0">
@@ -512,7 +581,7 @@ export default function CampusMap() {
             if (!q) return null;
             const viewing = p.id === sel;
             const seen = explored.includes(p.id);
-            const faded = sel ? !viewing : filter !== 'all' && p.cat !== filter;
+            const faded = sel ? !viewing : !inFilter(p.cat, filter);
             return (
               <button
                 key={p.id}
@@ -547,7 +616,7 @@ export default function CampusMap() {
             <span
               data-walk
               style={{ left: `${route.mid[0] * 100}%`, top: `${route.mid[1] * 100}%`, ...counter }}
-              className="pointer-events-none absolute whitespace-nowrap bg-royal px-3 py-1.5 text-14 font-semibold text-off-white"
+              className="pointer-events-none absolute whitespace-nowrap bg-royal px-3 py-1.5 text-14 font-semibold text-off-white max-md:hidden"
             >
               About {route.minutes} min walk
             </span>
@@ -555,12 +624,12 @@ export default function CampusMap() {
         </div>
 
         {/* Top bar. */}
-        <div className="pointer-events-none absolute inset-x-4 top-4 flex flex-wrap items-start justify-between gap-2 md:inset-x-14">
-          <div className="pointer-events-auto bg-off-white px-3 py-2 text-ink">
-            <p className="text-17 font-semibold" aria-live="polite"><Count value={explored.length} total={places.length} /> explored</p>
+        <div className={`pointer-events-none absolute inset-x-4 top-4 flex flex-wrap items-start justify-between gap-2 md:inset-x-14 ${place ? `${BESIDE_CARD} max-md:top-1 max-md:[&_a]:px-1 max-md:[&_button]:px-1` : ''}`}>
+          <div data-explored-chip className={`pointer-events-auto bg-off-white px-3 py-2 text-ink ${place ? 'max-md:px-2' : ''}`}>
+            <p className={`text-17 font-semibold ${place ? 'max-md:text-14' : ''}`} aria-live="polite"><Count value={explored.length} total={places.length} /> explored</p>
           </div>
-          <div className="pointer-events-auto flex flex-wrap justify-end gap-2">
-            <div role="group" aria-label="Map view" className="flex gap-px bg-ink/20">
+          <div className={`pointer-events-auto flex flex-wrap justify-end gap-2 ${place ? 'max-md:justify-start' : ''}`}>
+            <div role="group" aria-label="Map view" className={`flex gap-px bg-ink/20 ${place ? 'max-md:flex-wrap' : ''}`}>
               <button type="button" aria-pressed={plan} onClick={() => !plan && swap(() => setPlan(true))} className={`min-h-11 min-w-11 px-3 text-14 font-semibold transition-colors duration-200 ${seg(plan)}`}>2D</button>
               <button type="button" aria-pressed={!plan} onClick={() => plan && swap(() => setPlan(false))} className={`min-h-11 min-w-11 px-3 text-14 font-semibold transition-colors duration-200 ${seg(!plan)}`}>3D</button>
               <a href={home.cta.tour} target="_blank" rel="noreferrer" className={`${ctl} hover:bg-ink`}>360°</a>
@@ -570,13 +639,13 @@ export default function CampusMap() {
         </div>
 
         {/* Bottom bar. */}
-        <div className="pointer-events-none absolute inset-x-4 bottom-4 flex items-end justify-between gap-3 md:inset-x-14">
+        <div className={`pointer-events-none absolute inset-x-4 bottom-4 flex items-end justify-between gap-3 md:inset-x-14 ${place ? `${BESIDE_CARD} max-md:bottom-1 max-md:flex-col max-md:items-start max-md:gap-1` : 'max-md:flex-wrap max-md:gap-2 max-md:pr-16'}`}>
           <div className="pointer-events-auto hidden max-w-[320px] bg-off-white px-3 py-2 text-14 text-ink md:block">
             <p className="font-semibold">Illustrative map</p>
             <p>Building positions are not surveyed.</p>
           </div>
           <p className="pointer-events-auto bg-off-white px-3 py-2 text-14 font-semibold text-ink md:hidden">Illustrative map</p>
-          <div className="pointer-events-auto flex items-end gap-2">
+          <div className={`pointer-events-auto flex items-end gap-2 ${place ? 'max-md:flex-wrap' : ''}`}>
             {!plan && (
               <div role="group" aria-label="Rotate map" className="flex gap-px bg-ink/20">
                 <button type="button" aria-label="Rotate left" data-rotate="left" onClick={() => swap(() => setK(((k + 3) % 4) as Quarter))} className={ctl}><Turn /></button>
@@ -628,25 +697,28 @@ export default function CampusMap() {
               exit={{ x: 40, opacity: 0 }}
               transition={{ duration: 0.35, ease: 'easeOut' }}
               onPointerDown={(e) => e.stopPropagation()}
-              className="absolute inset-x-0 bottom-0 z-10 max-h-[64%] cursor-auto overflow-y-auto bg-ink text-off-white md:inset-x-auto md:top-20 md:right-14 md:bottom-20 md:max-h-none md:w-[380px]"
+              className="absolute inset-x-0 bottom-0 z-10 max-h-[64%] cursor-auto overflow-y-auto bg-ink text-off-white max-md:top-0 max-md:left-auto max-md:max-h-none max-md:w-[55%] max-md:overscroll-contain max-md:pb-20 md:inset-x-auto md:top-20 md:right-14 md:bottom-20 md:max-h-none md:w-[380px]"
             >
-              {photoFor(`campus.${place.id}`) ? <Photo slot={`campus.${place.id}`} className="aspect-video" /> : <div className="hidden md:block"><BuildingPortrait id={place.id} scene={scene} /></div>}
-              <div className="p-6">
-                <p className="eyebrow">{place.category}</p>
-                <h3 className="mt-2 text-22 font-bold">{place.name}</h3>
-                <p className="mt-2 text-17">{place.desc}</p>
+              {photoFor(`campus.${place.id}`) ? <Photo slot={`campus.${place.id}`} className="aspect-video" /> : <BuildingPortrait id={place.id} scene={scene} />}
+              <div className="p-6 max-md:p-3">
+                <p className="eyebrow max-md:text-12 max-md:break-words">{place.category}</p>
+                <h3 className="mt-2 text-22 font-bold max-md:text-17 max-md:break-words">{place.name}</h3>
+                <p className="mt-2 text-17 max-md:text-14">{place.desc}</p>
                 <ul className="mt-3 flex flex-wrap gap-x-4 text-14">
                   {place.facilities.map((f) => <li key={f}>+ {f}</li>)}
                 </ul>
+                {route && route.minutes > 0 && <p className="mt-3 text-14 font-semibold md:hidden">About {route.minutes} min walk</p>}
                 <div className="mt-5 flex flex-wrap gap-2">
-                  <a href={home.cta.tour} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center bg-amber px-4 text-14 font-bold text-ink transition-colors duration-200 hover:bg-off-white">Enter 360° view</a>
-                  <button type="button" onClick={fitRoute} className="min-h-11 border border-off-white px-4 text-14 font-semibold transition-colors duration-200 hover:bg-off-white hover:text-ink">Directions</button>
+                  <a href={home.cta.tour} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center bg-amber px-4 text-14 font-bold text-ink transition-colors duration-200 hover:bg-off-white max-md:w-full max-md:justify-center max-md:px-2">Enter 360° view</a>
+                  <button type="button" onClick={fitRoute} className="min-h-11 border border-off-white px-4 text-14 font-semibold transition-colors duration-200 hover:bg-off-white hover:text-ink max-md:w-full max-md:px-2">Directions</button>
                 </div>
                 <button type="button" className="mt-4 min-h-11 text-14 font-semibold underline underline-offset-2" onClick={close}>Close card</button>
               </div>
             </motion.aside>
           )}
         </AnimatePresence>
+      </div>
+
       </div>
 
       {/* Filters, the jump list and the legend sit under the map so it stays clear. */}
@@ -659,7 +731,7 @@ export default function CampusMap() {
                 type="button"
                 data-filter={f.id}
                 aria-pressed={filter === f.id}
-                onClick={() => { setSel(null); setFilter(f.id); }}
+                onClick={() => chooseFilter(f.id)}
                 className={`min-h-11 shrink-0 border-2 border-ink px-3 text-14 font-semibold transition-colors duration-200 ${filter === f.id ? 'bg-ink text-off-white' : 'hover:bg-ink/10'}`}
               >
                 {f.t}

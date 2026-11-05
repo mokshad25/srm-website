@@ -1183,7 +1183,17 @@
   ]
  },
  "note": "Illustrative map. Building positions are not surveyed.",
- "filters": [
+  "directory": [
+    { "id": "academic", "t": "Academic Buildings", "cats": ["academic"] },
+    { "id": "research", "t": "Research Centres", "cats": ["research"] },
+    { "id": "hostel", "t": "Hostels", "cats": ["hostel"] },
+    { "id": "sports", "t": "Sports Facilities", "cats": ["sports"] },
+    { "id": "green", "t": "Student Spaces", "cats": ["green"] },
+    { "id": "library", "t": "Libraries", "cats": ["library"] },
+    { "id": "dining", "t": "Food & Dining", "cats": ["dining"] },
+    { "id": "other", "t": "Other Facilities", "cats": ["health", "landmark"] }
+  ],
+  "filters": [
   {
    "id": "all",
    "t": "All"
