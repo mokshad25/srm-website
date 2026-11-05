@@ -46,6 +46,11 @@ def _official_url_clause():
     return or_(*conditions) if conditions else and_(False)
 
 
+def _related_categories(category: str) -> list[str]:
+    # Faculty admission pages describe programmes too, so these two search together.
+    return ["academics", "admissions"] if category in {"academics", "admissions"} else [category]
+
+
 def _year_variants(year: str) -> tuple[str, str]:
     start, end = year.split("-", maxsplit=1)
     return year, f"{start}-{start[:2]}{end}"
@@ -69,7 +74,7 @@ def retrieve_evidence(
         )
     )
     if category:
-        statement = statement.where(Document.category == category)
+        statement = statement.where(Document.category.in_(_related_categories(category)))
     if academic_year:
         statement = statement.where(Document.academic_year.in_(_year_variants(academic_year)))
 

@@ -659,3 +659,11 @@ def test_citation_variants_are_normalized(answer, expected):
     from app.services.rag import _normalize_citations
 
     assert _normalize_citations(answer) == expected
+
+
+def test_academics_and_admissions_search_together_but_not_campus():
+    from app.services.retrieval import _related_categories
+
+    assert set(_related_categories("academics")) == {"academics", "admissions"}
+    assert set(_related_categories("admissions")) == {"academics", "admissions"}
+    assert _related_categories("campus") == ["campus"]

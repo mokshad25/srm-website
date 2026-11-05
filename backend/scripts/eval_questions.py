@@ -1,6 +1,6 @@
 """POST the seed questions to a running API and print each status.
 
-Usage: python scripts/eval_questions.py [limit]
+Usage: python scripts/eval_questions.py [skip]
 Each question gets its own session, so earlier answers don't influence later
 ones. Set EVAL_PAUSE (seconds) to stay under a provider's token limit; Groq's
 free tier needs about 30. A 503 is retried once after a longer wait.
@@ -31,7 +31,7 @@ def ask(question: str) -> requests.Response:
 def main() -> None:
     questions = json.loads(DATASET.read_text(encoding="utf-8"))
     if len(sys.argv) > 1:
-        questions = questions[: int(sys.argv[1])]
+        questions = questions[int(sys.argv[1]) :]
     counts: Counter[str] = Counter()
     for item in questions:
         response = ask(item["question"])
