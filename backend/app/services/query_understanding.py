@@ -3,14 +3,21 @@ from dataclasses import dataclass
 
 ADMISSIONS_TERMS = {
     "admission", "admissions", "srmjeee", "eligibility", "application", "fee", "fees", "tuition", "scholarship",
+    "apply", "applying",
 }
 ACADEMICS_TERMS = {
     "academic", "academics", "course", "courses", "program", "programs", "programme", "programmes", "department",
     "exam", "examination", "calendar", "regulation", "curriculum", "degree", "engineering", "undergraduate",
-    "postgraduate", "cse",
+    "postgraduate", "cse", "semester",
 }
 CAMPUS_TERMS = {
     "hostel", "library", "transport", "sports", "campus", "facility", "facilities", "club", "clubs", "accommodation",
+    "housing",
+}
+# In scope for SRM, but spanning categories, so they must not narrow retrieval to one.
+SCOPE_ONLY_TERMS = {
+    "placement", "career", "recruiter", "research", "medical", "medicine", "mbbs", "hospital", "nursing", "dining",
+    "food",
 }
 FOLLOW_UP_TERMS = {
     "it", "that", "this", "they", "them", "those", "there", "include", "includes", "about", "also", "what",
@@ -34,7 +41,8 @@ class QueryUnderstanding:
 
 
 def _terms(text: str) -> set[str]:
-    return set(re.findall(r"[a-z0-9]+", text.casefold()))
+    words = set(re.findall(r"[a-z0-9]+", text.casefold()))
+    return words | {word[:-1] for word in words if len(word) > 3 and word.endswith("s")}
 
 
 def _normalize_year(year: str) -> str:
@@ -81,7 +89,7 @@ def understand_query(
         context_parts.append(" ".join(words))
     previous_context = " ".join(context_parts)
     context_terms = _terms(previous_context)
-    categories = ADMISSIONS_TERMS | ACADEMICS_TERMS | CAMPUS_TERMS
+    categories = ADMISSIONS_TERMS | ACADEMICS_TERMS | CAMPUS_TERMS | SCOPE_ONLY_TERMS
     current_is_in_scope = bool(current_terms & categories) or "srmist" in current_terms or "srm" in current_terms
     contextual_follow_up = bool(history and current_terms & FOLLOW_UP_TERMS and context_terms & categories)
     in_scope = current_is_in_scope or contextual_follow_up
