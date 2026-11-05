@@ -40,7 +40,7 @@ function ExploredCard() {
   const total = campus.places.length;
   return (
     <Link
-      to="/#campus"
+      to="/campus-explorer"
       data-hero-explored
       className="group block w-full border border-ink/15 bg-off-white p-4 text-ink transition-colors duration-200 hover:border-ink lg:w-72"
     >
@@ -48,7 +48,7 @@ function ExploredCard() {
       <span aria-hidden className="mt-3 block h-1 bg-ink/15">
         <span className="block h-full origin-left bg-royal transition-transform duration-500" style={{ transform: `scaleX(${explored.length / total})` }} />
       </span>
-      <span className="mt-3 block text-14 font-medium underline underline-offset-4">Open the campus map</span>
+      <span className="mt-3 block text-14 font-medium underline underline-offset-4">Open the campus explorer</span>
     </Link>
   );
 }
@@ -109,7 +109,7 @@ export default function Hero() {
           <motion.p {...rise(0.3)} className="mt-7 max-w-[720px] text-22">{h.sub}</motion.p>
           <motion.div {...rise(0.38)} className="mt-7 [text-shadow:none]"><AskBar /></motion.div>
           <motion.div {...rise(0.46)} className="mt-7 flex flex-wrap gap-3 [text-shadow:none]">
-            <Button href="/#campus" variant="royal">Explore Campus</Button>
+            <Button href="/campus-explorer" variant="royal">Explore Campus</Button>
             <Button href={site.applyUrl}>Apply Now</Button>
           </motion.div>
           <motion.div {...rise(0.54)} className="mt-7 lg:hidden"><ExploredCard /></motion.div>
