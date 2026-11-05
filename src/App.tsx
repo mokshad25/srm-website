@@ -1,8 +1,10 @@
 import { lazy, Suspense, useEffect } from 'react';
 import { MotionConfig } from 'framer-motion';
 import { Route, Routes, useLocation } from 'react-router-dom';
-import AskPanel from './components/ask/AskPanel';
 import { AskProvider } from './components/ask/AskProvider';
+import { IntroEmergencyButton } from './components/emergency/EmergencyButton';
+import EmergencySheet from './components/emergency/EmergencySheet';
+import ChatBoundary from './components/ChatBoundary';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import PageWipe from './components/PageWipe';
@@ -11,6 +13,7 @@ import Toaster from './components/Toast';
 import { scrollToTarget, useSmoothScroll } from './lib/motion';
 import Preloader from './sections/home/Preloader';
 
+const ChatWidget = lazy(() => import('./components/ask/ChatWidget'));
 const Home = lazy(() => import('./pages/Home'));
 const Engineering = lazy(() => import('./pages/Engineering'));
 const Medicine = lazy(() => import('./pages/Medicine'));
@@ -41,6 +44,9 @@ function ScrollManager() {
 export default function App() {
   return (
     <MotionConfig reducedMotion="user">
+      {/* Outside the chat provider on purpose: emergency help must survive a chat failure. */}
+      <EmergencySheet />
+      <IntroEmergencyButton />
       <AskProvider>
         <ScrollManager />
         <a
@@ -64,7 +70,11 @@ export default function App() {
           </Suspense>
         </main>
         <Footer />
-        <AskPanel />
+        <ChatBoundary>
+          <Suspense fallback={null}>
+            <ChatWidget />
+          </Suspense>
+        </ChatBoundary>
         <Toaster />
         <ScrollIndex />
         <PageWipe />

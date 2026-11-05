@@ -10,7 +10,8 @@
     "check:photos": "node scripts/check-photos.mjs",
     "shot": "npm run build && node scripts/screenshot.mjs",
     "verify": "node scripts/verify.mjs",
-    "shot:ask": "node scripts/ask_screenshots.mjs"
+    "shot:ask": "node scripts/ask_screenshots.mjs",
+    "shot:support": "node scripts/support_screenshots.mjs"
   },
   "dependencies": {
     "@fontsource/cormorant-garamond": "^5.3.0",

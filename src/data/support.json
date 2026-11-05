@@ -1,0 +1,227 @@
+{
+  "assistant": {
+    "title": "SRM Support",
+    "subtitle": "Answers from official SRM pages",
+    "greeting": "Hello. I'm an automated assistant, not a person. What do you need help with?",
+    "launcherGreeting": "Need help? Ask SRM",
+    "disclaimer": "Answers come from public SRM pages and may be out of date."
+  },
+  "chips": [
+    { "id": "emergency", "label": "Emergency help", "action": "emergency" },
+    { "id": "admissions", "label": "Admissions", "question": "How do I apply for admission to SRM Kattankulathur?" },
+    { "id": "fees", "label": "Fees & scholarships", "question": "Which scholarships are available at SRM?" },
+    { "id": "hostel", "label": "Hostel", "question": "Which hostels are available?" },
+    { "id": "exams", "label": "Exams", "question": "What is the SRMJEEE exam?" },
+    { "id": "transport", "label": "Transport", "question": "How does the SRM campus bus facility work?" },
+    { "id": "campus", "label": "Campus & facilities", "question": "What facilities are available on campus?" }
+  ],
+  "contacts": {
+    "title": "Talk to a person",
+    "note": "This site is not an official SRM service. These are SRM's published contacts, and SRM staff reply through them, not here.",
+    "hours": null,
+    "sourceLabel": "SRMIST telephone directory, 2026",
+    "sourceUrl": "https://webstor.srmist.edu.in/web_assets/downloads/2026/srmist-telephone-directory.pdf",
+    "channels": [
+      {
+        "id": "main",
+        "label": "SRMIST main line",
+        "phone": "044-27417000",
+        "tel": "04427417000",
+        "email": null
+      },
+      {
+        "id": "info",
+        "label": "University Information Centre",
+        "phone": "080-69087000",
+        "tel": "08069087000",
+        "email": null
+      },
+      {
+        "id": "admissions",
+        "label": "Director (Admissions)",
+        "phone": "044-27455715",
+        "tel": "04427455715",
+        "email": "director.admissions@srmist.edu.in"
+      },
+      {
+        "id": "students",
+        "label": "Director (Student Affairs)",
+        "phone": "044-27456021",
+        "tel": "04427456021",
+        "email": "director.sa@srmist.edu.in"
+      },
+      {
+        "id": "exams",
+        "label": "Controller of Examinations",
+        "phone": "044-27452818",
+        "tel": "04427452818",
+        "email": "coe@srmist.edu.in"
+      },
+      {
+        "id": "hostels",
+        "label": "Assistant Director, Hostels",
+        "phone": "044-27434501",
+        "tel": "04427434501",
+        "email": "asstdirector.hostels@srmist.edu.in"
+      },
+      {
+        "id": "transport",
+        "label": "General Manager, Transport (KTR)",
+        "phone": "044-27417317",
+        "tel": "04427417317",
+        "email": "gm.transport@srmist.edu.in"
+      }
+    ]
+  },
+  "checkIn": {
+    "question": "Did this answer your question?",
+    "yes": "Yes",
+    "no": "No",
+    "afterYes": "Glad that helped. Anything else I can help you with?",
+    "afterNo": "Sorry about that. One of these may be closer, or you can talk to a person.",
+    "notFound": "Would one of these help instead?",
+    "suggestionsLabel": "You can also ask",
+    "otherTopics": "See all help topics",
+    "rephrase": "Ask in my own words",
+    "topicsLabel": "Help topics",
+    "feedbackFailed": "Your feedback couldn't be sent, but you can carry on."
+  },
+  "followUps": {
+    "general": [
+      "How do I apply for admission to SRM Kattankulathur?",
+      "Are scholarships available for incoming students?",
+      "Which hostels are available?",
+      "What facilities are available on campus?"
+    ],
+    "topics": [
+      {
+        "id": "apply",
+        "keywords": [
+          "apply",
+          "application",
+          "admission",
+          "deadline",
+          "document",
+          "eligib",
+          "selected"
+        ],
+        "questions": [
+          "Where can I check admission deadlines?",
+          "What documents are listed for admission?",
+          "What are the B.Tech eligibility criteria?",
+          "Are scholarships available for incoming students?"
+        ]
+      },
+      {
+        "id": "engineering",
+        "keywords": [
+          "engineering",
+          "b\\.?tech",
+          "srmjeee",
+          "computer science",
+          "cse"
+        ],
+        "questions": [
+          "What are the B.Tech eligibility criteria?",
+          "Which B.Tech programmes are offered?",
+          "What is the SRMJEEE exam?",
+          "Are scholarships available for incoming students?"
+        ]
+      },
+      {
+        "id": "medicine",
+        "keywords": [
+          "medical",
+          "medicine",
+          "mbbs",
+          "health sciences",
+          "hospital",
+          "nursing",
+          "pharm"
+        ],
+        "questions": [
+          "Which medical and health sciences programmes are offered?",
+          "What does the medical college hospital offer?",
+          "Are scholarships available for medical students?"
+        ]
+      },
+      {
+        "id": "scholarships",
+        "keywords": [
+          "scholarship",
+          "fee",
+          "tuition",
+          "financial"
+        ],
+        "questions": [
+          "Are scholarships available for incoming students?",
+          "Are scholarships available for medical students?",
+          "What documents are listed for admission?"
+        ]
+      },
+      {
+        "id": "international",
+        "keywords": [
+          "international",
+          "foreign",
+          "nri",
+          "overseas"
+        ],
+        "questions": [
+          "Does SRM publish international admission requirements?",
+          "Which hostels are available?",
+          "Where is the Kattankulathur campus located?"
+        ]
+      },
+      {
+        "id": "hostel",
+        "keywords": [
+          "hostel",
+          "housing",
+          "accommodation",
+          "room",
+          "mess",
+          "dining"
+        ],
+        "questions": [
+          "What hostel facilities are listed at Kattankulathur?",
+          "What dining facilities are available on campus?",
+          "How does the SRM campus bus facility work?"
+        ]
+      },
+      {
+        "id": "transport",
+        "keywords": [
+          "transport",
+          "bus\\b",
+          "travel",
+          "located",
+          "location",
+          "reach"
+        ],
+        "questions": [
+          "Where is the Kattankulathur campus located?",
+          "Which hostels are available?",
+          "What facilities are available on campus?"
+        ]
+      },
+      {
+        "id": "campus",
+        "keywords": [
+          "facilit",
+          "library",
+          "sport",
+          "club",
+          "activit",
+          "campus life"
+        ],
+        "questions": [
+          "What library facilities are available on campus?",
+          "What sports facilities are listed at the campus?",
+          "Which student clubs and activities are available?",
+          "What dining facilities are available on campus?"
+        ]
+      }
+    ]
+  }
+}

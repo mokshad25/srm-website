@@ -1,0 +1,136 @@
+{
+  "copy": {
+    "title": "Emergency help",
+    "lead": "If someone is in danger, call 112 now.",
+    "footer": "These buttons place a call to the number shown. This website is not an emergency dispatch service.",
+    "askAnyway": "Not an emergency? Ask anyway",
+    "notSent": "Your message was not sent to the assistant.",
+    "locationLabel": "Copy my location details",
+    "locationHelp": "Edit this, then read it to the operator. It stays on your device.",
+    "locationTemplate": "SRM KTR, Block / Gate: ____"
+  },
+  "distress": {
+    "title": "You don't have to face this alone",
+    "message": "I'm really sorry you're going through this. These people are ready to listen.",
+    "notSent": "Your message stays on this device. It was not sent to the assistant."
+  },
+  "groups": [
+    { "id": "medical", "title": "Medical" },
+    { "id": "safety", "title": "Safety and security" },
+    { "id": "anti-ragging", "title": "Anti-ragging" },
+    { "id": "womens-safety", "title": "Women's safety" },
+    { "id": "mental-health", "title": "Mental-health support" }
+  ],
+  "entries": [
+    {
+      "id": "national-emergency",
+      "group": "safety",
+      "label": "National emergency number",
+      "number": "112",
+      "tel": "112",
+      "primary": true,
+      "distress": true,
+      "verified": true,
+      "source": "National number supplied by the site owner"
+    },
+    {
+      "id": "ambulance",
+      "group": "medical",
+      "label": "Ambulance",
+      "number": "108",
+      "tel": "108",
+      "verified": true,
+      "source": "National number supplied by the site owner"
+    },
+    {
+      "id": "ugc-anti-ragging",
+      "group": "anti-ragging",
+      "label": "UGC helpline",
+      "number": "1800-180-5522",
+      "tel": "18001805522",
+      "verified": true,
+      "source": "National number supplied by the site owner"
+    },
+    {
+      "id": "women-helpline",
+      "group": "womens-safety",
+      "label": "Women helpline",
+      "number": "1091",
+      "tel": "1091",
+      "verified": true,
+      "source": "National number supplied by the site owner"
+    },
+    {
+      "id": "tele-manas",
+      "group": "mental-health",
+      "label": "Tele-MANAS",
+      "number": "14416",
+      "tel": "14416",
+      "distress": true,
+      "verified": true,
+      "source": "National number supplied by the site owner"
+    },
+    {
+      "id": "srm-casualty",
+      "group": "medical",
+      "label": "SRM Medical College Hospital casualty",
+      "number": "044-27451568",
+      "tel": "04427451568",
+      "distress": true,
+      "verified": false,
+      "source": "https://webstor.srmist.edu.in/web_assets/downloads/2026/srmist-telephone-directory.pdf",
+      "note": "Listed in the 2026 directory and on https://medical.srmist.edu.in/contact-us/. Confirm it before setting verified to true."
+    },
+    {
+      "id": "srm-ambulance",
+      "group": "medical",
+      "label": "SRM hospital ambulance",
+      "number": "105786",
+      "tel": "105786",
+      "verified": false,
+      "source": "https://webstor.srmist.edu.in/web_assets/downloads/2026/srmist-telephone-directory.pdf",
+      "note": "The directory lists 105786 (toll free). The medical contact page runs its digits together, so the two could not be matched."
+    },
+    {
+      "id": "srm-security",
+      "group": "safety",
+      "label": "SRM campus security",
+      "number": "+91-73580-98801",
+      "tel": "+917358098801",
+      "verified": false,
+      "source": "https://www.srmist.edu.in/life-at-srm/getting-around-campus-safety/",
+      "note": "Seen only in a search summary. The page refused automated reading and does not clearly say whose number this is."
+    },
+    {
+      "id": "srm-helpline",
+      "group": "safety",
+      "label": "SRM main line",
+      "number": "044-27417000",
+      "tel": "04427417000",
+      "verified": false,
+      "source": "https://webstor.srmist.edu.in/web_assets/downloads/2026/srmist-telephone-directory.pdf",
+      "note": "This is the main university number. No 24-hour staffing is stated."
+    },
+    {
+      "id": "srm-anti-ragging",
+      "group": "anti-ragging",
+      "label": "SRM anti-ragging helpline",
+      "number": "99400-36024",
+      "tel": "+919940036024",
+      "verified": false,
+      "source": "https://www.srmist.edu.in/life-at-srm/anti-ragging/",
+      "note": "Seen only in a search summary, which also listed 9940036028. The page refused automated reading."
+    },
+    {
+      "id": "srm-counselling",
+      "group": "mental-health",
+      "label": "SRM student counselling",
+      "number": null,
+      "tel": null,
+      "distress": true,
+      "verified": false,
+      "source": "https://www.srmist.edu.in/student-support/",
+      "note": "No number found. The page refused automated reading."
+    }
+  ]
+}

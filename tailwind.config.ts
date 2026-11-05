@@ -28,6 +28,8 @@ export default {
         'srm-blue': '#1B3FA0',
         amber: '#FFB81C',
         teal: '#16A6A1',
+        // Emergency actions only.
+        danger: '#B3261E',
         // Home only, from the recording.
         night: '#060F24',
         royal: '#1B4DB1',

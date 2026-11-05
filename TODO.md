@@ -2,6 +2,36 @@
 
 Everything hidden, unconfirmed or different from the references.
 
+## Support chat follow-up questions
+- [ ] **Suggestions are a curated list, not generated.** The API returns no suggestions and the backend stays unchanged, so `followUps` in `src/data/support.json` holds them. Each was answered at least once in past runs, but answers vary between runs, so one can still come back unverified. Avoid fees, placements and the academic calendar until those pages are indexed. If the backend later returns suggestions, use those instead.
+- [ ] **Yes and No replace the thumbs.** They send 5 or 1 to `/api/feedback`. The optional comment box is gone, because the backend can't add a comment after a rating and the reply has to move the chat on at once.
+
+## Support chat and emergency: check before shipping
+**The Emergency sheet shows only entries with `"verified": true` in `src/data/emergency.json`.** To show an SRM entry, confirm it, correct it if needed, and set `verified` to `true`.
+
+National numbers. You supplied these and they are live now, so please check each one:
+- [ ] 112, national emergency number
+- [ ] 108, ambulance
+- [ ] 1091, women helpline
+- [ ] 1800-180-5522, UGC anti-ragging helpline
+- [ ] 14416, Tele-MANAS
+
+SRM emergency entries. All are hidden. The `www.srmist.edu.in` pages refused automated reading, so someone has to open them in a browser:
+- [ ] **Casualty, SRM Medical College Hospital:** 044-27451568. Also listed: 044-47432345. Both are in the [2026 directory](https://webstor.srmist.edu.in/web_assets/downloads/2026/srmist-telephone-directory.pdf) and on the [medical contact page](https://medical.srmist.edu.in/contact-us/). Confirm that it takes emergency calls from students.
+- [ ] **SRM hospital ambulance:** 105786 (toll free) in the directory, which also lists 9791938643, 9791938637 and 9384053188. The medical contact page runs its digits together, so the two couldn't be matched.
+- [ ] **Campus security:** +91-73580-98801 came from a search summary of the [safety page](https://www.srmist.edu.in/life-at-srm/getting-around-campus-safety/), which doesn't clearly say whose number it is. Not read directly.
+- [ ] **Anti-ragging cell:** 9940036024 and 9940036028 came from a search summary of the [anti-ragging page](https://www.srmist.edu.in/life-at-srm/anti-ragging/). Not read directly. The summary dated the committee to 2025-26, so check it is current.
+- [ ] **Main helpline:** 044-27417000 from the directory. It's the university's main number, and nothing says it's staffed out of hours.
+- [ ] **Student counselling:** no number found. The [student support page](https://www.srmist.edu.in/student-support/) refused automated reading. Until this is filled in, the distress screen shows only Tele-MANAS and 112.
+
+"Talk to a person" contacts in `src/data/support.json`:
+- [ ] All seven phone numbers and emails come from the [2026 directory](https://webstor.srmist.edu.in/web_assets/downloads/2026/srmist-telephone-directory.pdf), read directly. Check they're still current.
+- [ ] **Office hours are not shown.** The only published hours found are "Mon – Fri 9:00 A.M. – 5:00 P.M." on the medical contact page, and they aren't tied to one office. To show hours, set `contacts.hours`.
+
+Safety keywords in `src/data/emergencyKeywords.json`:
+- [ ] Ask Hindi and Tamil speakers to review the list. The transliterations are unreviewed.
+- [ ] Keyword matching can't catch every way of saying something. A message it misses goes to the assistant, and the backend has no safety check of its own.
+
 ## Needs your attention
 - `notes.md` still isn't supplied, so all facts come from the text of the Claude Design export.
 - **Hero photo still soft.** `campus-aerial.jpg` is 1200 x 370, stretched about 2.4x at 1440 x 900. Supply a real SRM campus photo at least 2400 px wide under the same filename, then update `width` and `height` in `src/data/photos.json`. Most other SRM photos are under 750 px wide too.
