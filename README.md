@@ -1,14 +1,6 @@
 # SRMIST — The Connected University Experience
 
-\<p align="center">
-&#x20; \<strong>A smarter, more accessible and interactive digital experience for SRM Institute of Science and Technology.\</strong>
-\</p>
-
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/Project-University%20Web%20Platform-163B70?style=for-the-badge](https://img.shields.io/badge/Project-University%20Web%20Platform-163B70?style=for-the-badge)" />
-&#x20; \<img src="[https://img.shields.io/badge/Status-Under%20Development-orange?style=for-the-badge](https://img.shields.io/badge/Status-Under%20Development-orange?style=for-the-badge)" />
-&#x20; \<img src="[https://img.shields.io/badge/Focus-UX%20%7C%20AI%20%7C%20Accessibility-2E8064?style=for-the-badge](https://img.shields.io/badge/Focus-UX%20%7C%20AI%20%7C%20Accessibility-2E8064?style=for-the-badge)" />
-\</p>
+<img width="1917" height="913" alt="image" src="https://github.com/user-attachments/assets/d0339222-f763-4795-ad4a-4d823a85a529" />
 
 ---
 
