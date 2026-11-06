@@ -1,0 +1,138 @@
+{
+  "platforms": [
+    {
+      "id": "student-portal",
+      "name": "SRM Student Portal",
+      "url": "https://sp.srmist.edu.in/",
+      "category": "Student Services",
+      "description": "Access student-related services and account information through the SRMIST Student Portal.",
+      "keywords": ["student", "account", "services", "portal"],
+      "icon": "student",
+      "imageSlot": "home.life-communities",
+      "featured": true
+    },
+    {
+      "id": "academia",
+      "name": "Academia",
+      "url": "https://academia.srmist.edu.in/",
+      "category": "Academic Services",
+      "description": "Access SRMIST academic information and related academic services.",
+      "keywords": ["academic", "academics", "information", "course"],
+      "icon": "academic",
+      "imageSlot": "home.discover-3",
+      "featured": true
+    },
+    {
+      "id": "central-library",
+      "name": "University Central Library",
+      "url": "https://library.srmist.edu.in/",
+      "category": "Library & Learning Resources",
+      "description": "Explore the university's central library resources, catalogue and library services.",
+      "keywords": ["library", "books", "catalogue", "resources"],
+      "icon": "library",
+      "imageSlot": "home.life-library",
+      "featured": true
+    },
+    {
+      "id": "student-connect",
+      "name": "Student Connect",
+      "url": "https://studentconnect.srmist.edu.in/",
+      "category": "Student Services",
+      "description": "Access student-facing digital services and university-related resources.",
+      "keywords": ["student", "connect", "services", "resources"],
+      "icon": "student",
+      "imageSlot": "home.life-clubs",
+      "featured": true
+    },
+    {
+      "id": "parent-connect",
+      "name": "Parent Connect",
+      "url": "https://parentconnect.srmist.edu.in/",
+      "category": "Student Services",
+      "description": "A dedicated digital platform for parents to access relevant university-related information and services.",
+      "keywords": ["parent", "family", "services", "information"],
+      "icon": "student"
+    },
+    {
+      "id": "ssp",
+      "name": "Self Service Password Reset (SSP)",
+      "url": "https://ssp.srmist.edu.in/",
+      "category": "IT & Technical Support",
+      "description": "Reset or manage your SRMIST NetID password.",
+      "keywords": ["password", "reset", "NetID", "login", "technical"],
+      "icon": "technical"
+    },
+    {
+      "id": "it-service-desk",
+      "name": "IT Service Desk",
+      "url": "https://sd.srmist.edu.in/",
+      "category": "IT & Technical Support",
+      "description": "Access technical support and submit IT-related assistance requests.",
+      "keywords": ["IT", "support", "help", "technical", "service desk"],
+      "icon": "technical"
+    },
+    {
+      "id": "srmist-apps",
+      "name": "SRMIST Apps",
+      "url": "https://apps.srmist.edu.in/",
+      "category": "IT & Technical Support",
+      "description": "Access SRMIST's collection of digital applications and related services.",
+      "keywords": ["apps", "applications", "digital", "services"],
+      "icon": "technical"
+    },
+    {
+      "id": "itkm",
+      "name": "ITKM",
+      "url": "https://www.srmist.edu.in/itkm/",
+      "category": "IT & Technical Support",
+      "description": "Explore information about SRMIST's information technology infrastructure and technology resources.",
+      "keywords": ["IT", "technology", "infrastructure", "resources"],
+      "icon": "technical"
+    },
+    {
+      "id": "ecurricula",
+      "name": "eCurricula LMS",
+      "url": "https://dld.srmist.edu.in/etecurricula/",
+      "category": "Academic & Online Education",
+      "description": "Access course-related digital learning resources for the Faculty of Engineering and Technology.",
+      "keywords": ["LMS", "courses", "learning", "engineering", "curriculum"],
+      "icon": "academic"
+    },
+    {
+      "id": "online-education-support",
+      "name": "Directorate of Online Education Support",
+      "url": "https://srmist.freshdesk.com/support/home",
+      "category": "Academic & Online Education",
+      "description": "Find support information and assistance related to online education.",
+      "keywords": ["online", "education", "support", "help"],
+      "icon": "education"
+    },
+    {
+      "id": "certificate-portal",
+      "name": "Certificate Requisition Portal",
+      "url": "https://sp.srmist.edu.in/srmiststudentportal/students/loginManager/CRPLogin.jsp",
+      "category": "Academic & Online Education",
+      "description": "Access certificate-related services, including applicable transcript and certificate requests.",
+      "keywords": ["certificate", "transcript", "requisition", "documents"],
+      "icon": "academic"
+    },
+    {
+      "id": "digital-library",
+      "name": "SRMIST Digital Library — Knimbus",
+      "url": "https://srmistdl.knimbus.com/portal/v2/default/home",
+      "category": "Library & Learning Resources",
+      "description": "Explore digital library resources and academic learning materials through the SRMIST Digital Library.",
+      "keywords": ["library", "digital", "books", "learning", "research"],
+      "icon": "library"
+    },
+    {
+      "id": "srmdei",
+      "name": "SRMDEI",
+      "url": "https://www.srmdei.com/",
+      "category": "Academic & Online Education",
+      "description": "Explore SRMDEI's digital education information and initiatives.",
+      "keywords": ["digital education", "online", "education", "initiatives"],
+      "icon": "education"
+    }
+  ]
+}

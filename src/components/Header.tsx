@@ -4,7 +4,6 @@ import seal from '../assets/srm-seal.png';
 import site from '../data/site.json';
 import { useIntroDone } from '../lib/intro';
 import AskTrigger from './ask/AskTrigger';
-import EmergencyButton from './emergency/EmergencyButton';
 
 export const headerKey = (pathname: string) =>
   pathname.startsWith('/engineering') ? 'engineering' : pathname.startsWith('/medicine') ? 'medicine' : 'home';
@@ -70,7 +69,6 @@ export default function Header() {
               {h.apply.t}
             </a>
           </nav>
-          <EmergencyButton tabIndex={off} />
           <AskTrigger tone={light ? 'dark' : 'light'} tabIndex={off} />
           <button
             ref={toggle}
