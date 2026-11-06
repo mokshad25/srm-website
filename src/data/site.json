@@ -62,6 +62,10 @@
         {
           "t": "About",
           "to": "/learn-leap-lead"
+        },
+        {
+          "t": "Campus Pulse",
+          "to": "/campus-pulse"
         }
       ],
       "apply": {
@@ -114,6 +118,10 @@
         {
           "t": "Careers",
           "to": "/engineering#careers"
+        },
+        {
+          "t": "Campus Pulse",
+          "to": "/campus-pulse"
         }
       ],
       "apply": {
@@ -168,6 +176,10 @@
         {
           "t": "About",
           "to": "/medicine#about"
+        },
+        {
+          "t": "Campus Pulse",
+          "to": "/campus-pulse"
         }
       ],
       "apply": {

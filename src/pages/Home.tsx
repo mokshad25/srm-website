@@ -5,6 +5,7 @@ import Stat from '../components/Stat';
 import home from '../data/home.json';
 import site from '../data/site.json';
 import CampusSection from '../sections/home/CampusSection';
+import CampusPulseTicker from '../components/CampusPulseTicker';
 import Discover from '../sections/home/Discover';
 import Hero from '../sections/home/Hero';
 import { LiveLearnPlay, NewsEvents, Recruiters, Testimonials, WorldMap } from '../sections/home/Optional';
@@ -64,6 +65,7 @@ export default function Home() {
 
   return (
     <div className="home bg-night">
+      <CampusPulseTicker />
       <Hero />
       {/* Rises over the pinned hero during its first 100vh. */}
       <div className="relative z-10 motion-safe:lg:-mt-[100svh]">

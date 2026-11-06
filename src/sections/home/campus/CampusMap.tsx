@@ -525,10 +525,10 @@ export default function CampusMap() {
     <>
       <Section
         tone="paper"
-        className="!pb-10"
+        className="!pt-24 !pb-5 md:!pt-28 md:!pb-6"
         label="Explore the campus"
-        heading={<>Walk it before you <em className="font-serif font-normal">arrive.</em></>}
-        intro="Click a marker or a building to open its card, drag to look around, and watch the route draw from Gate 4."
+        heading={<>Explore <em className="font-serif font-normal">SRMIST.</em></>}
+        intro="Navigate the campus, discover buildings and find your destination."
       />
       <div className="relative">
       <CampusDirectory filter={filter} selected={sel} onFilter={chooseFilter} onPlace={open} onHover={setHover} />
