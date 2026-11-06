@@ -261,6 +261,22 @@
       "source": "stock",
       "licence": "Unsplash License",
       "url": "https://unsplash.com/photos/a-group-of-people-holding-hands-on-top-of-a-tree-DNkoNXQti3c"
+    },
+    {
+      "id": "parent-connect",
+      "file": "parent-connect.png",
+      "width": 639,
+      "height": 480,
+      "alt": "Parents celebrating with a graduating student",
+      "source": "user-provided"
+    },
+    {
+      "id": "digital-library-knimbus",
+      "file": "digital-library-knimbus.png",
+      "width": 547,
+      "height": 365,
+      "alt": "Shelves of books in a university library",
+      "source": "user-provided"
     }
   ],
   "slots": {
@@ -298,6 +314,8 @@
     "learn.hero": "main-gate",
     "learn.learn": "classroom",
     "learn.leap": "tech-park-steps",
-    "learn.lead": "convocation"
+    "learn.lead": "convocation",
+    "digital-gateway.parent-connect": "parent-connect",
+    "digital-gateway.digital-library": "digital-library-knimbus"
   }
 }

@@ -272,9 +272,9 @@ export default function ChatWidget() {
         onCancel={onCancel}
         onClose={close}
         onClick={onClick}
-        className="support-panel on-light fixed inset-0 m-0 h-dvh max-h-none w-full max-w-none overflow-hidden bg-white text-ink backdrop:bg-transparent sm:inset-auto sm:right-6 sm:bottom-6 sm:h-[640px] sm:max-h-[calc(100dvh-3rem)] sm:w-[400px] sm:rounded-3xl sm:border sm:border-ink/10 sm:shadow-2xl"
+        className="support-panel on-light fixed inset-0 m-0 h-dvh max-h-none w-full max-w-none overflow-hidden bg-white p-0 text-ink backdrop:bg-transparent sm:inset-auto sm:right-6 sm:bottom-6 sm:h-[640px] sm:max-h-[calc(100dvh-3rem)] sm:w-[400px] sm:rounded-3xl sm:border sm:border-ink/10 sm:shadow-2xl"
       >
-        <div className="flex h-full flex-col">
+        <div className="flex h-full min-h-0 flex-col">
           <div className="relative z-10 flex items-center gap-1 bg-srm-blue px-3 py-2.5 text-off-white">
             <img src={seal} alt="" width={40} height={40} className="mr-1.5 h-10 w-10 shrink-0 rounded-full bg-white p-0.5" />
             <div className="min-w-0 flex-1">
@@ -313,7 +313,7 @@ export default function ChatWidget() {
           </div>
 
           <div className="relative flex min-h-0 flex-1 flex-col bg-off-white">
-          <div ref={scroller} onScroll={checkMore} data-chat-scroller className="relative min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-3">
+          <div ref={scroller} onScroll={checkMore} data-chat-scroller className="relative min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-3 py-3">
             {contactsOpen ? (
               <TalkToPerson onBack={hideContacts} />
             ) : (

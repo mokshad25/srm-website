@@ -51,7 +51,8 @@
       "category": "Student Services",
       "description": "A dedicated digital platform for parents to access relevant university-related information and services.",
       "keywords": ["parent", "family", "services", "information"],
-      "icon": "student"
+      "icon": "student",
+      "imageSlot": "digital-gateway.parent-connect"
     },
     {
       "id": "ssp",
@@ -123,7 +124,8 @@
       "category": "Library & Learning Resources",
       "description": "Explore digital library resources and academic learning materials through the SRMIST Digital Library.",
       "keywords": ["library", "digital", "books", "learning", "research"],
-      "icon": "library"
+      "icon": "library",
+      "imageSlot": "digital-gateway.digital-library"
     },
     {
       "id": "srmdei",
