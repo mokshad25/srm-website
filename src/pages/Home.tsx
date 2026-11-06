@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from '../components/Button';
+import PulseTicker from '../components/pulse/PulseTicker';
 import Section from '../components/Section';
 import Stat from '../components/Stat';
 import home from '../data/home.json';
@@ -64,6 +65,7 @@ export default function Home() {
 
   return (
     <div className="home bg-night">
+      <PulseTicker />
       <Hero />
       {/* Rises over the pinned hero during its first 100vh. */}
       <div className="relative z-10 motion-safe:lg:-mt-[100svh]">

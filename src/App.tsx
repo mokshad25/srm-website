@@ -19,6 +19,8 @@ const Engineering = lazy(() => import('./pages/Engineering'));
 const Medicine = lazy(() => import('./pages/Medicine'));
 const LearnLeapLead = lazy(() => import('./pages/LearnLeapLead'));
 const CampusExplorer = lazy(() => import('./pages/CampusExplorer'));
+const CampusPulse = lazy(() => import('./pages/CampusPulse'));
+const PulseDetail = lazy(() => import('./pages/PulseDetail'));
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
@@ -65,6 +67,8 @@ export default function App() {
               <Route path="/medicine" element={<Medicine />} />
               <Route path="/learn-leap-lead" element={<LearnLeapLead />} />
               <Route path="/campus-explorer" element={<CampusExplorer />} />
+              <Route path="/campus-pulse" element={<CampusPulse />} />
+              <Route path="/campus-pulse/:id" element={<PulseDetail />} />
               <Route path="*" element={<Home />} />
             </Routes>
           </Suspense>

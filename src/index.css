@@ -312,6 +312,16 @@ html:has([data-lock-scroll][open]) {
     transform: translateX(-50%);
   }
 }
+.pulse-track {
+  animation: marquee var(--ticker-time, 60s) linear infinite;
+}
+.pulse-window:hover .pulse-track {
+  animation-play-state: paused;
+}
+/* A keyboard user needs the links where they are, not moving. */
+.pulse-window[data-keyboard] .pulse-track {
+  animation: none;
+}
 input:focus-visible,
 select:focus-visible {
   outline-offset: 0;

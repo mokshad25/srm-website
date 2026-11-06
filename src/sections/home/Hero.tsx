@@ -96,7 +96,7 @@ export default function Hero() {
         />
         <motion.div
           style={reduce || !desktop ? undefined : { y: textY, opacity: textO }}
-          className="relative max-w-[816px] px-6 pt-48 pb-10 md:px-14 lg:py-24 [text-shadow:0_1px_12px_rgb(6_15_36/0.45)]"
+          className="relative max-w-[816px] px-6 pt-48 pb-10 md:px-14 lg:py-24 [@media(min-width:1024px)_and_(max-height:860px)]:pt-36 [@media(min-width:1024px)_and_(max-height:860px)]:pb-6 [text-shadow:0_1px_12px_rgb(6_15_36/0.45)]"
         >
           <motion.p {...rise(0.05)} className="flex items-center gap-3 text-14 font-medium tracking-[0.12em] uppercase">
             <span aria-hidden className="h-0.5 w-9 bg-amber" />

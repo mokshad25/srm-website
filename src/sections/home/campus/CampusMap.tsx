@@ -2,7 +2,6 @@ import { memo, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useStat
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import gsap from 'gsap';
 import Photo from '../../../components/Photo';
-import Section from '../../../components/Section';
 import { toast } from '../../../components/Toast';
 import campus from '../../../data/campus.json';
 import home from '../../../data/home.json';
@@ -523,13 +522,6 @@ export default function CampusMap() {
 
   return (
     <>
-      <Section
-        tone="paper"
-        className="!pb-10"
-        label="Explore the campus"
-        heading={<>Walk it before you <em className="font-serif font-normal">arrive.</em></>}
-        intro="Click a marker or a building to open its card, drag to look around, and watch the route draw from Gate 4."
-      />
       <div className="relative">
       <CampusDirectory filter={filter} selected={sel} onFilter={chooseFilter} onPlace={open} onHover={setHover} />
       <div

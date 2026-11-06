@@ -107,7 +107,7 @@ export default function CampusDirectory({ filter, selected, onFilter, onPlace, o
     >
       <div className="px-4 pt-4 pb-2 max-xl:hidden">
         <p className="text-12 font-semibold tracking-[0.14em] text-amber/90 uppercase">Find your way</p>
-        <h3 className="mt-0.5 font-display text-22 leading-tight">Campus Directory</h3>
+        <h2 className="mt-0.5 font-display !text-22 leading-tight">Campus Directory</h2>
       </div>
       <ul ref={strip} className="no-scrollbar relative flex gap-1.5 overflow-x-auto px-3 py-1.5 xl:grid xl:gap-0.5 xl:overflow-visible xl:px-2 xl:pt-0 xl:pb-2">
         {category('all', 'All locations', places.length, filter === 'all')}

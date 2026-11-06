@@ -2,6 +2,12 @@
 
 Everything hidden, unconfirmed or different from the references.
 
+## Campus Pulse
+- [ ] **Only the 8 events from `src/data/news.json` are real.** They were listed on https://www.srmist.edu.in/events on 5 Nov 2026. Their times, venues and departments aren't known, so they aren't shown. Everything in `src/data/pulse.json` is demonstration content, labelled as such, and never reaches the homepage ticker.
+- [ ] **To publish an update,** add it to `src/data/pulse.json` with `"status": "published"` and `"verified": true`, or set `VITE_PULSE_API` to a URL returning `{ "items": [...] }`. Set `verified` only after someone at SRMIST has confirmed it. A real entry should have a `url` to its source.
+- [ ] **`news.json` still feeds the homepage's News and events block directly.** With `VITE_PULSE_API` set, Campus Pulse and the ticker use the API, but that block stays on `news.json` until it is moved over.
+- [ ] **Event categories are inferred.** `Competition` maps to Technical Events in `src/lib/pulse.ts`.
+
 ## Support chat follow-up questions
 - [ ] **Suggestions are a curated list, not generated.** The API returns no suggestions and the backend stays unchanged, so `followUps` in `src/data/support.json` holds them. Each was answered at least once in past runs, but answers vary between runs, so one can still come back unverified. Avoid fees, placements and the academic calendar until those pages are indexed. If the backend later returns suggestions, use those instead.
 - [ ] **Yes and No replace the thumbs.** They send 5 or 1 to `/api/feedback`. The optional comment box is gone, because the backend can't add a comment after a rating and the reply has to move the chat on at once.

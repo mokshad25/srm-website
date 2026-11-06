@@ -59,14 +59,14 @@ export default function Header() {
             <span className="hidden text-14 font-medium sm:block">{h.division}</span>
           </span>
         </Link>
-        <div className="flex shrink-0 items-center gap-2 sm:gap-3 xl:gap-4 2xl:gap-8">
-          <nav aria-label="Main" className="hidden items-center gap-5 xl:flex 2xl:gap-8">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3 min-[1700px]:gap-8">
+          <nav aria-label="Main" className="hidden items-center gap-3.5 xl:flex min-[1700px]:gap-8">
             {h.nav.map((n) => (
-              <NavLink key={n.t} to={n.to} tabIndex={off} end className="nav-link text-17 font-medium">
+              <NavLink key={n.t} to={n.to} tabIndex={off} end className="nav-link text-17 font-medium xl:max-[1439px]:text-14">
                 {n.t}
               </NavLink>
             ))}
-            <a href={h.apply.href} tabIndex={off} className="bg-amber px-6 py-3 text-17 font-semibold text-ink transition-colors duration-200 hover:bg-ink hover:text-off-white">
+            <a href={h.apply.href} tabIndex={off} className="bg-amber px-4 py-3 text-17 font-semibold min-[1700px]:px-6 text-ink transition-colors duration-200 hover:bg-ink hover:text-off-white">
               {h.apply.t}
             </a>
           </nav>
