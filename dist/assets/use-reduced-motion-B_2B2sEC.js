@@ -1,1 +1,0 @@
-import{Q as e,et as t,h as n,m as r,p as i}from"./photos-C7yVxhkV.js";var a=t(e(),1);function o(){!r.current&&i();let[e]=(0,a.useState)(n.current);return e}export{o as t};

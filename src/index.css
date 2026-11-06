@@ -187,6 +187,19 @@ html:has([data-lock-scroll][open]) {
   background-size: 100% 2px;
 }
 
+.campus-ticker-track {
+  animation: campus-ticker 42s linear infinite;
+}
+
+@keyframes campus-ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /* Campus map. */
 .campus-scene {
   background: #efe7d6;
